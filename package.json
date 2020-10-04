@@ -1,0 +1,21 @@
+{
+  "name": "Botty_McBotface",
+  "version": "1.0.5",
+  "description": "All in one bot by Marshall",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/bot.js",
+    "dev": "nodemon ./src/bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "FileReader": "^0.10.2",
+    "axios": "^0.20.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "line-reader": "^0.4.0"
+  }
+}
