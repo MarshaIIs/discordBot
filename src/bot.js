@@ -28,7 +28,7 @@ client.on("message", async (message) => {
     if (!message.content.startsWith(process.env.PREFIX) || message.author.bot || message.channel.type === 'dm') return;
 
     const [command, ...args] = message.content
-    .toLowerCase()
+    //.toLowerCase()
     .trim()
     .substring(process.env.PREFIX.length)
     .split(/\s+/);

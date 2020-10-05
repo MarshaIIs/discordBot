@@ -1,6 +1,348 @@
 {
     "strats": {
-        "atk": [],
-        "def": []
+        "atk": [
+            {
+                "title": "NO ROOF",
+                "body": "NO FLOOR"
+            },
+            {
+                "title": "PHALANX",
+                "body": "All shields (Monty, Blitz, Fuze, Blackbeard - Last is the rear and can be anything).\r"
+            },
+            {
+                "title": "OMEGA RUSH",
+                "body": "Finka, etc no stopping until on site.\r"
+            },
+            {
+                "title": "NO METAL",
+                "body": "All hardbreachers.\r"
+            },
+            {
+                "title": "TRUE RUSH",
+                "body": "Speed 1 Rush.\r"
+            },
+            {
+                "title": "WALL HUGGER",
+                "body": "You have to always be touching the left wall from the moment you get in the building.\r"
+            },
+            {
+                "title": "RECRUITS FOR ALL",
+                "body": "All go LMG recruit and rush to site.\r"
+            },
+            {
+                "title": "LEADER",
+                "body": "One leader, everyone follows him. You have to do anything they tell you to.\r"
+            },
+            {
+                "title": "FREEBIE",
+                "body": "You can do what you want.\r"
+            },
+            {
+                "title": "GUNGAME",
+                "body": "Start with primary, move to secondary, then knife, then gadget. Fifth kill is anything.\r"
+            },
+            {
+                "title": "STREEEEEEETCH",
+                "body": "Set aspect ratio to 21:9.\r"
+            },
+            {
+                "title": "TEAMWORK",
+                "body": "Everyone picks each others operator (you pick whoever is below you on the leaderboard, bottom picks tops).\r"
+            },
+            {
+                "title": "BURST",
+                "body": "Burst fire only (AR33, Commando, Hibana gun, F2, Jackal rifle, Jackal SMG, AK-12)\r"
+            },
+            {
+                "title": "NINJAGO",
+                "body": "You cannot move when somebody is looking at you and you must sneak everywhere, cause you are ninja. You also have to put a suppressor on your gun. Bonus points for dissapearing into smoke.\r"
+            },
+            {
+                "title": "PUKE",
+                "body": "Set sens to 100 CANNOT change DPI. (Dont change ADS sens).\r"
+            },
+            {
+                "title": "MAN DOWN!",
+                "body": "If a team mate is dead everyone (including the dead player/players) must type in global chat \"MAN DOWN!\".\r"
+            },
+            {
+                "title": "ALL OR NOTHING",
+                "body": "When you fire a gun you cannot release the fire button until the mag is empty.\r"
+            },
+            {
+                "title": "PENGUINS",
+                "body": "After entering the building, stay in a group, crouched. Never leave the huddle.\r"
+            },
+            {
+                "title": "IM A SNEEEKK",
+                "body": "After entering the building, must be prone whole time.\r"
+            },
+            {
+                "title": "GLUE",
+                "body": "Go operators with DMR's and use the 3x scope. You cant unscope! (Twitch, Glaz, Buck, Blackbeard, Dokkaebi, Maverick, Kali)\r"
+            },
+            {
+                "title": "DESIGNATED MARKSMAN",
+                "body": "Case/Defuser carrier is the only one who can shoot. Give the case to someone else to allow them to shoot. If the case is lost, then you must recover it!\r"
+            },
+            {
+                "title": "COMMANDO",
+                "body": "HIPFIRE ONLY!\r"
+            },
+            {
+                "title": "MOMMA DUCK",
+                "body": "One player goes Montagne, he is the momma duck, the others go Recruit. Recruits must follow behind the momma duck, and Momma duck leads the group.\r"
+            },
+            {
+                "title": "STICKY FEET",
+                "body": "No one can vault or repel for the entire round\r"
+            },
+            {
+                "title": "MCCREE",
+                "body": "All must use revolvers/deagle and flashbangs. Players can only use revolvers and melee to kill. (Monty, Twitch, Blackbeard, Nøkk, Lion)\r"
+            },
+            {
+                "title": "CHOO CHOO TRAIN",
+                "body": "Everyone must go through the same doorways, in the same order. No windows, hatches, or ladders. You cannot go through the same doorway twice.\r"
+            },
+            {
+                "title": "AVENGERS ASSEMBLE",
+                "body": "Must pick Sledge (Thor), Capitao (Nick Fury), Ash (Black Widow), Blitz (Captain America), and Amaru (Spiderman). On round start, one person types \"Avengers Assemble!\". Each person then introduces their character (\"THOR THUNDERGOD!\" ... etc). Blitz can only melee with the shield. Sledge can only use the hammer. Ash can only use the pistol. Amaru has to use her gadget at least once.\r"
+            },
+            {
+                "title": "NO ARK",
+                "body": "Objective must be spammed with flash bangs, smoke and shields in one wave (all must be recruit for this to work).\r"
+            },
+            {
+                "title": "GANGSTER",
+                "body": "Montagne, and all LMG's. Breach a door and yeet smokes in. Monty goes in (plants defuses) while everyone spam fires. No ADS. On round start all type \"IM GONNA MAKE YOU AN OFFER YOU CANT REFUSE!\".\r"
+            },
+            {
+                "title": "OK BOOMER",
+                "body": "All go hard breacher or operator with breach charges, open up every wall not part of the objective room (surrounding it).\r"
+            },
+            {
+                "title": "LE ROC",
+                "body": " take a Montagne, Gridlock, Capitao, Glaz and Thermite. Have Thermite breach the reinforced wall, have Capitao put a smoke in so Monty plants, Glaz then covers monty through the smoke and Gridlock puts down her trap all over the bomb.\r"
+            },
+            {
+                "title": "SNIPER SQUAD",
+                "body": "Use kali and glaz and the rest have to be an operator that uses semi auto weapons with an acog and a suppressor. Play the entire round like this but you all must stick together and you can’t switch to your secondarys.\r"
+            },
+            {
+                "title": "KING OF THE HILL",
+                "body": "Only 1 person at a time can enter the building and has to try and kill as many people as they can. Once they die, another person goes in. You can't defuse, extract the hostage, or plant defuser, you have to eliminate all enemy players first.\r"
+            },
+            {
+                "title": "TACTICAL BOMBARDMENT",
+                "body": "All take frag grenade, open up the objective room and lob the frags. Bonus points if you spam an lmg in there as well.\r"
+            },
+            {
+                "title": "TRIGGER DISCIPLINE",
+                "body": "All go LMG. Only one person can shoot at a time. To stop shooting, someone else has to take over first. (there will be a small overlap where 2 people are shooting).\r"
+            },
+            {
+                "title": "DEATH FROM ABOVE",
+                "body": "All place breach charges on the ceiling of the objective room if it's breachable (like in chalet) and detonate the five charges **at once**. Then, shoot from the room above.\r"
+            },
+            {
+                "title": "SHOTGUN RUSH",
+                "body": "All take shotguns on attack and rush. Shotguns must be full-auto (Thermite, Maverick, Ying, Finka, Nøkk, Ace).\r"
+            },
+            {
+                "title": "NO SMOKE WITHOUT FIRE",
+                "body": "Fill the objective with smokes, enter the objective, and go prone. You can only stand when in smoke.\r"
+            },
+            {
+                "title": "DRONE WARFARE",
+                "body": "All drones must attempt to enter the objective room. Those whose drones fail cannot use their guns until the last minute of the game.\r"
+            },
+            {
+                "title": "TRAINING DAY",
+                "body": "All teammates chose operator and equip iron sights. Once the game starts, click to semi auto only, and get to working.\r"
+            },
+            {
+                "title": "THE F-U BOMB",
+                "body": "Choose Dokkabei, Blitz, Lion, Jackal, and Ying. Take as many smokes and flashes as possible and just bombard the objective with everything you have while planting/securing.\r"
+            },
+            {
+                "title": "HUNTING DOGS",
+                "body": "One squadmate goes Jackal, the rest recruit with LMG. The recruits follow Jackal around as he scans for footprints. Recruits rush to hunt down the scanned player once found. Bonus points for dog noises."
+            }
+        ],
+        "def": [
+            {
+                "title": "SKEET SHOOTIN",
+                "body": "Semi-automatic shotguns only!\r"
+            },
+            {
+                "title": "DEPLOYABLES",
+                "body": "Deployable shields, everywhere (bring Goyo)!\r"
+            },
+            {
+                "title": "MOONGUN",
+                "body": "Secondary SMG's ONLY!\r"
+            },
+            {
+                "title": "AH SH*T",
+                "body": "Reinforce a different site! You can only leave if the bomb is planted or there is 20 seconds left on the timer!\r"
+            },
+            {
+                "title": "SHIT PEEK",
+                "body": "Shitty spawnpeeks! Sit in front of windows nobody ever does, camp in random corners right next to entrances and be an overall rat!\r"
+            },
+            {
+                "title": "RANDOM",
+                "body": "Random operator, random spawn.\r"
+            },
+            {
+                "title": "MARATHON",
+                "body": "Don't stop running unless it's to place a gadget, break a barricade, or place a barricade.\r"
+            },
+            {
+                "title": "LOVE STRUCK",
+                "body": "If you see a team mate you have to freeze, you can't even move your corsshair, wait a moment, and say down the mic \"I think I love you [PERSON].\"\r"
+            },
+            {
+                "title": "HAHAHAHA",
+                "body": "If you kill an enemy you must all laugh in the global chat.\r"
+            },
+            {
+                "title": "DIRTY HARRY",
+                "body": "Pistols only. You can't reload. If you down someone you have to type \"do you feel lucky punk?\". After getting a kill you can reload.\r"
+            },
+            {
+                "title": "CLAUSTROPHOBIC",
+                "body": "At the beginning of the action phase every player must be outside. You cannot re-enter the building unless someone is taking the objective.\r"
+            },
+            {
+                "title": "RECRUITS FOR ALL",
+                "body": "Recruit Round.\r"
+            },
+            {
+                "title": "LEADER",
+                "body": "One leader, everyone follows him. You have to do anything they tell you to.\r"
+            },
+            {
+                "title": "FREEBIE",
+                "body": "You can do what you want, just this once.\r"
+            },
+            {
+                "title": "GUNGAME",
+                "body": "Start with primary, move to secondary, then knife, then gadget. Fifth kill is anything.\r"
+            },
+            {
+                "title": "STREEEEEEETCH",
+                "body": "Set aspect ratio to 21:9.\r"
+            },
+            {
+                "title": "TEAMWORK",
+                "body": "Everyone picks each others operator (you pick whoever is below you on the leaderboard, bottom picks tops).\r"
+            },
+            {
+                "title": "BURST",
+                "body": "Burst fire only (MP5K, MP5, Vector, UMP).\r"
+            },
+            {
+                "title": "NINJAGO",
+                "body": "You cannot move when somebody is looking at you and you must sneak everywhere, cause you are ninja.\r"
+            },
+            {
+                "title": "PUKE",
+                "body": "Set sens to 100 CANNOT change DPI.\r"
+            },
+            {
+                "title": "MAN DOWN!",
+                "body": "If a team mate is dead everyone (including the dead player/players) must type in global chat \"MAN DOWN!\".\r"
+            },
+            {
+                "title": "ALL OR NOTHING",
+                "body": "When you fire a gun you cannot release the fire button until the mag is empty.\r"
+            },
+            {
+                "title": "PENGUINS",
+                "body": "Stay in a group, crouched. Never leave the huddle.\r"
+            },
+            {
+                "title": "HIDE AND SEEK",
+                "body": "YOU MUST HIDE SOMEWHERE AND CAN ONLY MOVE WHEN FOUND OR THE BOMB IS PLANTED!\r"
+            },
+            {
+                "title": "2NO ROOF, NO FLOOR",
+                "body": "Go soft breachers, open top/bottom of site.\r"
+            },
+            {
+                "title": "COMMANDO",
+                "body": "HIPFIRE ONLY!\r"
+            },
+            {
+                "title": "SANCTUARY",
+                "body": "Everyone must choose an operator with a deployable shield (not goyo) and must make a corner with the walls reinforced and place the shields around all the operators in the corner. The operators may not leave the “sanctuary” until the objective is being taken\r"
+            },
+            {
+                "title": "SUICIDE PACT",
+                "body": "All operators run outside for the first 20 seconds of the game. You cannot return to the building until 20 seconds is up.\r"
+            },
+            {
+                "title": "FAVELA STRATS",
+                "body": "Open up every wall in site. If you have leftover impacts/bullets, open up the roof too. You can only reinforce hatches.\r"
+            },
+            {
+                "title": "AUTOGRAPH",
+                "body": "If one or more players is not in your party, chase them around claiming they are a celebrity and asking for them to say random catch phrases and such. (\"When is your next upload?, loved the last video!\".. etc)\r"
+            },
+            {
+                "title": "PROTECT THE LORD",
+                "body": "1 player choose tachanka, jager and wamai. the other two choose operators with deployable shields. Everyone's aim is to protect Tachanka.\r"
+            },
+            {
+                "title": "HIDING",
+                "body": "Hide in a small room near the objective with everyone inside, including at least castle, mute, and jager. Once the objective is being taken or the defuser is planted, everyone in the room runs out and goes ham.\r"
+            },
+            {
+                "title": "ITS A TRAP!",
+                "body": "Someone goes Rook. Rook places his armor outside and tries to make friends with the enemy. The others will hide at nearby windows and will ambush the enemy as they are distracted picking up armour.\r"
+            },
+            {
+                "title": "HIGH SURVEILLANCE",
+                "body": "Go Valkyrie, Maestro, Echo and any other operator with a camera. Choose a single high-activity point near site. Fill this area with all the surveillance. \r"
+            },
+            {
+                "title": "WITH OPEN ARMS",
+                "body": "All barricades in a room that you are in must be ripped open\r"
+            },
+            {
+                "title": "LOWER LOWER LOWER",
+                "body": "As the big boys you are, you cannot be hit even once. at the start of the round, lower your hp as low as possible. If you are hit and you do not go dbno or die, you must immolate. (Bring a Rook to make it easier to lower health)\r"
+            },
+            {
+                "title": "FRONT WAYS BACKWARDS",
+                "body": "Open all walls and castle off all doors.\r"
+            },
+            {
+                "title": "THE FLOOR IS LAVA 2.0",
+                "body": "2 people go bandit and kaid, the others go someone with barbed wire. Electrify the barbed wire and hide.\r"
+            },
+            {
+                "title": "TO BE WORTHY",
+                "body": "Must get a kill before picking up armor. Must pick up armor before getting another kill.\r"
+            },
+            {
+                "title": "BRIEFING",
+                "body": "One person goes Kaid. The rest goes Recruit. At the start of the round, Kaid gets up on an elevated position while all recruits crouch down around him and listen to the mission briefing. You can only move after the preperation phase is done, and you must follow the generals orders.\r"
+            },
+            {
+                "title": "ENTRY DENIED",
+                "body": "You cannot go through doors or windows. You can only go through walls that have been destroyed by you, the team, or the enemy. (shotguns, c4, etc. )\r"
+            },
+            {
+                "title": "GO FASTER STRIPES",
+                "body": "Create a line of sight at head height continuously through all breachable surfaces.\r"
+            },
+            {
+                "title": "ART CLASS",
+                "body": "Each take a wall and create an art piece. The most beautiful one does not get reinforced over."
+            }
+        ]
     }
 }

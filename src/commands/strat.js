@@ -8,20 +8,28 @@ module.exports = {
     async run (client, message, args) {
         if (args.length === 0) return message.reply("Please provide a team! (**Attacker** or **Defender**)");
         console.log(args);
+        const RAND = Math.floor(Math.random() * strats.def.length);
 
         if (args[0][0] == 'd') {
-            chosenStrat = strats.def[Math.floor(Math.random()*strats.def.length)];
+            chosenStrat = strats.def[RAND];
+            console.log('Array Length: ' + strats.def.length);
+            console.log('Random Number: ' + RAND);
+            console.log('Strat: ' + chosenStrat.title + ':\n' + chosenStrat.body);
+
             message.channel.send('Your **Defender** stratroulette is:\n\n**' + chosenStrat.title + '**\n' + '_' + chosenStrat.body + '_')
         } 
         
         else if (args[0][0] == 'a') {
-            chosenStrat = strats.atk[Math.floor(Math.random()*strats.atk.length)];
+            chosenStrat = strats.atk[RAND];
+            console.log('Array Length: ' + strats.atk.length);
+            console.log('Random Number: ' + RAND);
+            console.log('Strat: ' + chosenStrat.title + ':\n' + chosenStrat.body);
+
             message.channel.send('Your **Attacker** stratroulette is:\n\n**' + chosenStrat.title + '**\n' + '_' + chosenStrat.body + '_')
         }
         
         else {
             message.reply("Please provide a valid team! Either **Attacker** or **Defender**!")
         }
-
     }
 }
