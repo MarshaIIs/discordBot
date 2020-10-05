@@ -1,4 +1,5 @@
 var fs = require("fs");
+const { strats } = require("../database/strats/strats.json")
 
 module.exports = {
     name: 'strat',
