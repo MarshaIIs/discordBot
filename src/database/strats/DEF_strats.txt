@@ -5,7 +5,7 @@ AH SH*T: Reinforce a different site! You can only leave if the bomb is planted o
 SHIT PEEK: Shitty spawnpeeks! Sit in front of windows nobody ever does, camp in random corners right next to entrances and be an overall rat!
 RANDOM: Random operator, random spawn.
 MARATHON: Don't stop running unless it's to place a gadget, break a barricade, or place a barricade.
-LOVE STRUCK: If you see a team mate you have to freeze, you can't even move your corsshair, wait a moment, and say down the mic "I think I love you _."
+LOVE STRUCK: If you see a team mate you have to freeze, you can't even move your corsshair, wait a moment, and say down the mic "I think I love you [PERSON]."
 HAHAHAHA: If you kill an enemy you must all laugh in the global chat.
 DIRTY HARRY: Pistols only. You can't reload. If you down someone you have to type "do you feel lucky punk?". After getting a kill you can reload.
 CLAUSTROPHOBIC: At the beginning of the action phase every player must be outside. You cannot re-enter the building unless someone is taking the objective.
@@ -15,7 +15,7 @@ FREEBIE: You can do what you want, just this once.
 GUNGAME: Start with primary, move to secondary, then knife, then gadget. Fifth kill is anything.
 STREEEEEEETCH: Set aspect ratio to 21:9.
 TEAMWORK: Everyone picks each others operator (you pick whoever is below you on the leaderboard, bottom picks tops).
-BURST: Burst fire only (no semi-automatic guns! Guns must have burst fire capability!).
+BURST: Burst fire only (MP5K, MP5, Vector, UMP).
 NINJAGO: You cannot move when somebody is looking at you and you must sneak everywhere, cause you are ninja.
 PUKE: Set sens to 100 CANNOT change DPI.
 MAN DOWN!: If a team mate is dead everyone (including the dead player/players) must type in global chat "MAN DOWN!".
@@ -24,3 +24,20 @@ PENGUINS: Stay in a group, crouched. Never leave the huddle.
 HIDE AND SEEK: YOU MUST HIDE SOMEWHERE AND CAN ONLY MOVE WHEN FOUND OR THE BOMB IS PLANTED!
 2NO ROOF, NO FLOOR: Go soft breachers, open top/bottom of site.
 COMMANDO: HIPFIRE ONLY!
+SANCTUARY: Everyone must choose an operator with a deployable shield (not goyo) and must make a corner with the walls reinforced and place the shields around all the operators in the corner. The operators may not leave the “sanctuary” until the objective is being taken
+SUICIDE PACT: All operators run outside for the first 20 seconds of the game. You cannot return to the building until 20 seconds is up.
+FAVELA STRATS: Open up every wall in site. If you have leftover impacts/bullets, open up the roof too. You can only reinforce hatches.
+AUTOGRAPH: If one or more players is not in your party, chase them around claiming they are a celebrity and asking for them to say random catch phrases and such. ("When is your next upload?, loved the last video!".. etc)
+PROTECT THE LORD: 1 player choose tachanka, jager and wamai. the other two choose operators with deployable shields. Everyone's aim is to protect Tachanka.
+HIDING: Hide in a small room near the objective with everyone inside, including at least castle, mute, and jager. Once the objective is being taken or the defuser is planted, everyone in the room runs out and goes ham.
+ITS A TRAP!: Someone goes Rook. Rook places his armor outside and tries to make friends with the enemy. The others will hide at nearby windows and will ambush the enemy as they are distracted picking up armour.
+HIGH SURVEILLANCE: Go Valkyrie, Maestro, Echo and any other operator with a camera. Choose a single high-activity point near site. Fill this area with all the surveillance. 
+WITH OPEN ARMS: All barricades in a room that you are in must be ripped open
+LOWER LOWER LOWER: As the big boys you are, you cannot be hit even once. at the start of the round, lower your hp as low as possible. If you are hit and you do not go dbno or die, you must immolate. (Bring a Rook to make it easier to lower health)
+FRONT WAYS BACKWARDS: Open all walls and castle off all doors.
+THE FLOOR IS LAVA 2.0: 2 people go bandit and kaid, the others go someone with barbed wire. Electrify the barbed wire and hide.
+TO BE WORTHY: Must get a kill before picking up armor. Must pick up armor before getting another kill.
+BRIEFING: One person goes Kaid. The rest goes Recruit. At the start of the round, Kaid gets up on an elevated position while all recruits crouch down around him and listen to the mission briefing. You can only move after the preperation phase is done, and you must follow the generals orders.
+ENTRY DENIED: You cannot go through doors or windows. You can only go through walls that have been destroyed by you, the team, or the enemy. (shotguns, c4, etc. )
+GO FASTER STRIPES: Create a line of sight at head height continuously through all breachable surfaces.
+ART CLASS: Each take a wall and create an art piece. The most beautiful one does not get reinforced over.

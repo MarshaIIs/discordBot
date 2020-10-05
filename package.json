@@ -1,6 +1,6 @@
 {
   "name": "Botty_McBotface",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "All in one bot by Marshall",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "nodemon ./src/bot.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marshall / Cattegun",
   "license": "ISC",
   "dependencies": {
     "FileReader": "^0.10.2",

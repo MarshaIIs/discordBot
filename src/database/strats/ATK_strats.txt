@@ -4,19 +4,39 @@ OMEGA RUSH: Finka, etc no stopping until on site.
 NO METAL: All hardbreachers.
 TRUE RUSH: Speed 1 Rush.
 WALL HUGGER: You have to always be touching the left wall from the moment you get in the building.
-RECRUITS FOR ALL: Recruit Round.
+RECRUITS FOR ALL: All go LMG recruit and rush to site.
 LEADER: One leader, everyone follows him. You have to do anything they tell you to.
 FREEBIE: You can do what you want.
 GUNGAME: Start with primary, move to secondary, then knife, then gadget. Fifth kill is anything.
 STREEEEEEETCH: Set aspect ratio to 21:9.
 TEAMWORK: Everyone picks each others operator (you pick whoever is below you on the leaderboard, bottom picks tops).
-BURST: Burst fire only (no semi-automatic guns! Guns must have burst fire capability!).
-NINJAGO: You cannot move when somebody is looking at you and you must sneak everywhere, cause you are ninja.
-PUKE: Set sens to 100 CANNOT change DPI.
+BURST: Burst fire only (AR33, Commando, Hibana gun, F2, Jackal rifle, Jackal SMG, AK-12)
+NINJAGO: You cannot move when somebody is looking at you and you must sneak everywhere, cause you are ninja. You also have to put a suppressor on your gun. Bonus points for dissapearing into smoke.
+PUKE: Set sens to 100 CANNOT change DPI. (Dont change ADS sens).
 MAN DOWN!: If a team mate is dead everyone (including the dead player/players) must type in global chat "MAN DOWN!".
 ALL OR NOTHING: When you fire a gun you cannot release the fire button until the mag is empty.
-PENGUINS: Stay in a group, crouched. Never leave the huddle.
-IM A SNEEEKK: Must be prone whole time.
-GLUE: You musn't unscope!
+PENGUINS: After entering the building, stay in a group, crouched. Never leave the huddle.
+IM A SNEEEKK: After entering the building, must be prone whole time.
+GLUE: Go operators with DMR's and use the 3x scope. You cant unscope! (Twitch, Glaz, Buck, Blackbeard, Dokkaebi, Maverick, Kali)
 DESIGNATED MARKSMAN: Case/Defuser carrier is the only one who can shoot. Give the case to someone else to allow them to shoot. If the case is lost, then you must recover it!
 COMMANDO: HIPFIRE ONLY!
+MOMMA DUCK: One player goes Montagne, he is the momma duck, the others go Recruit. Recruits must follow behind the momma duck, and Momma duck leads the group.
+STICKY FEET: No one can vault or repel for the entire round
+MCCREE: All must use revolvers/deagle and flashbangs. Players can only use revolvers and melee to kill. (Monty, Twitch, Blackbeard, Nøkk, Lion)
+CHOO CHOO TRAIN: Everyone must go through the same doorways, in the same order. No windows, hatches, or ladders. You cannot go through the same doorway twice.
+AVENGERS ASSEMBLE: Must pick Sledge (Thor), Capitao (Nick Fury), Ash (Black Widow), Blitz (Captain America), and Amaru (Spiderman). On round start, one person types "Avengers Assemble!". Each person then introduces their character ("THOR THUNDERGOD!" ... etc). Blitz can only melee with the shield. Sledge can only use the hammer. Ash can only use the pistol. Amaru has to use her gadget at least once.
+NO ARK: Objective must be spammed with flash bangs, smoke and shields in one wave (all must be recruit for this to work).
+GANGSTER: Montagne, and all LMG's. Breach a door and yeet smokes in. Monty goes in (plants defuses) while everyone spam fires. No ADS. On round start all type "IM GONNA MAKE YOU AN OFFER YOU CANT REFUSE!".
+OK BOOMER: All go hard breacher or operator with breach charges, open up every wall not part of the objective room (surrounding it).
+LE ROC:  take a Montagne, Gridlock, Capitao, Glaz and Thermite. Have Thermite breach the reinforced wall, have Capitao put a smoke in so Monty plants, Glaz then covers monty through the smoke and Gridlock puts down her trap all over the bomb.
+SNIPER SQUAD: Use kali and glaz and the rest have to be an operator that uses semi auto weapons with an acog and a suppressor. Play the entire round like this but you all must stick together and you can’t switch to your secondarys.
+KING OF THE HILL: Only 1 person at a time can enter the building and has to try and kill as many people as they can. Once they die, another person goes in. You can't defuse, extract the hostage, or plant defuser, you have to eliminate all enemy players first.
+TACTICAL BOMBARDMENT: All take frag grenade, open up the objective room and lob the frags. Bonus points if you spam an lmg in there as well.
+TRIGGER DISCIPLINE: All go LMG. Only one person can shoot at a time. To stop shooting, someone else has to take over first. (there will be a small overlap where 2 people are shooting).
+DEATH FROM ABOVE: All place breach charges on the ceiling of the objective room if it's breachable (like in chalet) and detonate the five charges **at once**. Then, shoot from the room above.
+SHOTGUN RUSH: All take shotguns on attack and rush. Shotguns must be full-auto (Thermite, Maverick, Ying, Finka, Nøkk, Ace).
+NO SMOKE WITHOUT FIRE: Fill the objective with smokes, enter the objective, and go prone. You can only stand when in smoke.
+DRONE WARFARE: All drones must attempt to enter the objective room. Those whose drones fail cannot use their guns until the last minute of the game.
+TRAINING DAY: All teammates chose operator and equip iron sights. Once the game starts, click to semi auto only, and get to working.
+THE F-U BOMB: Choose Dokkabei, Blitz, Lion, Jackal, and Ying. Take as many smokes and flashes as possible and just bombard the objective with everything you have while planting/securing.
+HUNTING DOGS: One squadmate goes Jackal, the rest recruit with LMG. The recruits follow Jackal around as he scans for footprints. Recruits rush to hunt down the scanned player once found. Bonus points for dog noises.
