@@ -15,7 +15,7 @@ for(const file of commandFiles){
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`);
     client.user.setPresence({
-        status: 'idle',  // You can show online, idle... Do not disturb is dnd
+        status: 'idle',  // online, idle, dnd
         activity: {
             name: '%help',  // The message shown
             type: 'WATCHING' // PLAYING, WATCHING, LISTENING, STREAMING,
@@ -37,8 +37,9 @@ client.on("message", async (message) => {
 
     try {
         client.commands.get(command).run(client, message, args);
-
-    } catch (error){
+    } 
+    
+    catch (error){
         console.error(error);
     }
 })

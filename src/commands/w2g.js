@@ -17,7 +17,6 @@ module.exports = {
                 console.log(error.response.status);
                 console.log(error.response.headers);
                 message.channel.send("Woops. Seems an error occured here: " + error.response.status)
-                
             }
 
             else if (error.request) {
@@ -28,8 +27,7 @@ module.exports = {
                 // Something happened in setting up the request that triggered an Error
                 console.log('Error: ', error.message);
                 message.channel.send("An unknown error occured!")
-                }
-            
+            }
         });
     }
 }

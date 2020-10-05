@@ -3,7 +3,9 @@ module.exports = {
     decription: 'Kicks a designated user based on their ID',
     
     async run (client, message, args) {
-        message.reply('This command is currently non-functional.');
+        if (!message.member.hasPermission('KICK_MEMBERS'))
+        return message.reply("You do not have permission to use that command");
 
+        message.reply('This command is currently non-functional.');
     }
 }

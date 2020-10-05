@@ -9,6 +9,7 @@ module.exports = {
         const RAND_INT = args.join(' ');
         console.log(RAND_INT);
         const RAND = () => Math.floor(Math.random() * RAND_INT) + 1;
+        
         message.reply("your random number is: " + RAND());
     },
 }
