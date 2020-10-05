@@ -1,12 +1,11 @@
-
-const { strats } = require('../database/strats/strats.json');
+var fs = require("fs");
 
 module.exports = {
     name: 'strat',
-    decription: 'deferates a random strat roulette for siege based on which team is input (ATK/DEF).',
+    decription: 'deferates a random strat roulette for siege based on which team is inputted (ATK/DEF).',
     
     async run (client, message, args) {
-        if (args.length === 0) return message.reply("Please provide a team! (**Attacker** or **Defender**)");
+        if (args.length === 0) return message.reply("please provide a team! (**Attacker** or **Defender**)");
         console.log(args);
         const RAND = Math.floor(Math.random() * strats.def.length);
 
@@ -29,7 +28,7 @@ module.exports = {
         }
         
         else {
-            message.reply("Please provide a valid team! Either **Attacker** or **Defender**!")
+            message.reply("please provide a valid team! Either **Attacker** or **Defender**!")
         }
     }
 }
