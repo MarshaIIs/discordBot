@@ -17,13 +17,13 @@ client.on('ready', () => {
     client.user.setPresence({
         status: 'idle',  // online, idle, dnd
         activity: {
-            name: '%help',  // The message shown
+            name: 'you... \👀',  // The message shown
             type: 'WATCHING' // PLAYING, WATCHING, LISTENING, STREAMING,
         }
     });
 });
 
-client.on("message", async (message) => {
+client.on('message', async (message) => {
     if (message.author.bot) return;
     if (!message.content.startsWith(process.env.PREFIX) || message.author.bot || message.channel.type === 'dm') return;
 
@@ -43,5 +43,10 @@ client.on("message", async (message) => {
         console.error(error);
     }
 })
+
+client.on('guildMemberAdd', member => {
+    let myRole = member.guild.roles.cache.get("753252632327618560", "616801682881511464", "623922931638206474");
+    member.roles.add(myRole).catch(console.error);
+});
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);

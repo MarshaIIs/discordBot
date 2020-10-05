@@ -16,6 +16,6 @@ module.exports = {
         catch (err) {
             console.log(err);
             message.channel.send('An error occured. Either I do not have permissions or the user was not found');
-      }
+        }
     }
 }
