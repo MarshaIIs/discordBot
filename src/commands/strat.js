@@ -5,7 +5,7 @@ module.exports = {
     decription: 'deferates a random strat roulette for siege based on which team is inputted (ATK/DEF).',
     
     async run (client, message, args) {
-        if (args.length === 0) return message.reply("Please provide a team! (**Attacker** or **Defender**)");
+        if (args.length === 0) return message.reply("please provide a team! (**Attacker** or **Defender**)");
         console.log(args);
 
         if (args[0][0] == 'd') {
@@ -37,7 +37,7 @@ module.exports = {
         }
         
         else {
-            message.reply("Please provide a valid team! Either **Attacker** or **Defender**!")
+            message.reply("please provide a valid team! Either **Attacker** or **Defender**!")
         }
     }
 }
