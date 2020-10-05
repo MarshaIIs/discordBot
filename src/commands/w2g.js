@@ -4,7 +4,7 @@ module.exports = {
     name: 'w2g',
     decription: 'Automatically generates a Watch2Gether link.',
  
-    execute(message, args) {
+    async run (client, message, args) {
         console.log(args[0])
         axios.post("https://w2g.tv/rooms/create.json", { "w2g_api_key": process.env.w2gKey, "share":args[0] })
         .then(res => {

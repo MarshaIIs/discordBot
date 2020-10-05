@@ -2,7 +2,7 @@ module.exports = {
     name: 'ping',
     decription: 'Bans a designated user based on their ID, not their tag.',
     
-    run: async(client, message, args) => {
+    async run (client, message, args) {
     if (!message.member.hasPermission('BAN_MEMBERS'))
         return message.reply("You do not have permissions to use that command");
       if (args.length === 0) return message.reply("Please provide an ID");

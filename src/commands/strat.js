@@ -4,7 +4,7 @@ module.exports = {
     name: 'strat',
     decription: 'deferates a random strat roulette for siege based on which team is inputted (ATK/DEF).',
     
-    execute(message, args) {
+    async run (client, message, args) {
         if (args.length === 0) return message.reply("Please provide a team! (**Attacker** or **Defender**)");
         console.log(args);
 

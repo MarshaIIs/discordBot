@@ -2,7 +2,7 @@ module.exports = {
     name: 'vote',
     decription: 'Randomly ejects a user.',
     
-    execute(message, args) {
+    async run (client, message, args) {
         if (args.length === 0) return message.reply("Please vote for a user to eject.");
         console.log(args);
         const args_Poster = args.join(' ');
