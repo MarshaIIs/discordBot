@@ -8,5 +8,7 @@ assignees: ''
 ---
 
 **Name of the strat? (Keep it short):**
+The name of the strat. E.g, "MONKEY MODE".
 
 **Description of the strat.**
+The description of the strat. E.g, "You must make ape noises throughout the entire round".
