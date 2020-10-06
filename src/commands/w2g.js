@@ -1,4 +1,5 @@
 const axios = require("axios");
+const Discord = require('discord.js');
 
 module.exports = {
     name: 'w2g',
@@ -9,7 +10,11 @@ module.exports = {
         axios.post("https://w2g.tv/rooms/create.json", { "w2g_api_key": process.env.w2gKey, "share":args[0] })
         .then(res => {
             console.log(res.data);
-            message.channel.send("https://w2g.tv/rooms/" + res.data.streamkey + "?lang=en");
+            const msg = new Discord.MessageEmbed()
+            .setTitle('Watch2Gether room generated.')
+            .setURL(`https://w2g.tv/rooms/${res.data.streamkey}?lang=en`)
+            .setColor('FAA61A')
+            message.channel.send(msg);
         })
         .catch(error => {
             if (error.response){
