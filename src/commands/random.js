@@ -1,3 +1,5 @@
+const Discord = require('discord.js')
+
 module.exports = {
 	name: 'random',
     decription: 'Type and integer and the program will roll a number between 1 and said integer.',
@@ -10,6 +12,9 @@ module.exports = {
         console.log(RAND_INT);
         const RAND = () => Math.floor(Math.random() * RAND_INT) + 1;
         
-        message.reply("your random number is: " + RAND());
+        const msg = new Discord.MessageEmbed()
+        .setTitle('Your random number is: ' + RAND())
+        .setColor('FAA61A')
+        message.channel.send(msg);
     },
 }

@@ -11,8 +11,8 @@ module.exports = {
 
         const ping = new Discord.MessageEmbed()
         .setTitle('Pong! 🏓')
+        .setColor('FAA61A')
         .setDescription(`\`${message.createdTimestamp - Date.now()}\` clock time`);
-
         message.channel.send(ping);
     }
 }

@@ -1,10 +1,19 @@
+const Discord = require('discord.js');
+
 module.exports = {
     name: 'clear',
     decription: 'Clears X amount of messages from current channel.',
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR'))
-        return message.reply("You do not have permission to use that command");
+        if (!message.member.hasPermission('ADMINISTRATOR')) {
+            console.log(`${message.author.tag}` + ' is missing permissions to perform clear command');
+            perm_msg = new Discord.MessageEmbed()
+                .setTitle('Error!')
+                .setColor('ff3333')
+                .setDescription('You do not have permission to use that command!')
+
+            return message.channel.send(perm_msg);
+        }
 
         message.delete();
         let amount = args.join(" ");

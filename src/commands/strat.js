@@ -1,9 +1,10 @@
 var fs = require("fs");
 const { strats } = require("../database/strats/strats.json")
+const Discord = require('discord.js')
 
 module.exports = {
     name: 'strat',
-    decription: 'deferates a random strat roulette for siege based on which team is inputted (ATK/DEF).',
+    decription: 'Generates a random strat roulette for siege, based on which team is inputted (ATK/DEF).',
     
     async run (client, message, args) {
         if (args.length === 0) return message.reply("please provide a team! (**Attacker** or **Defender**)");
@@ -16,7 +17,11 @@ module.exports = {
             console.log('Random Number: ' + RAND);
             console.log('Strat: ' + chosenStrat.title + ':\n' + chosenStrat.body);
 
-            message.channel.send('Your **Defender** stratroulette is:\n\n**' + chosenStrat.title + '**\n' + '_' + chosenStrat.body + '_')
+            const def_msg = new Discord.MessageEmbed()
+            //.setTitle('Defender strat:')
+            .setColor('0083ff')
+            .addField(`${chosenStrat.title}`, `${chosenStrat.body}`);
+            message.channel.send(def_msg);
         } 
         
         else if (args[0][0] == 'a') {
@@ -25,7 +30,11 @@ module.exports = {
             console.log('Random Number: ' + RAND);
             console.log('Strat: ' + chosenStrat.title + ':\n' + chosenStrat.body);
 
-            message.channel.send('Your **Attacker** stratroulette is:\n\n**' + chosenStrat.title + '**\n' + '_' + chosenStrat.body + '_')
+            const atk_msg = new Discord.MessageEmbed()
+            //.setTitle('Attacker strat:')
+            .setColor('e91313')
+            .addField(`${chosenStrat.title}`, `${chosenStrat.body}`);
+            message.channel.send(atk_msg);
         }
         
         else {

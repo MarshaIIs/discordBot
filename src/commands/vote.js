@@ -14,7 +14,7 @@ module.exports = {
 
         message.reply('voted for ' + args_Poster);
         if (RAND_gen == 1) {
-            message.channel.send('\`\`\`                    . 　　　。　　　　•　 　ﾟ　　。 　　.\n           \n                　　　.　　　 　　.　　　　　。　　 。　. 　\n                \n                .　　 。　　　　　 ඞ 。 . 　　 • 　　　　•\n                \n                　　ﾟ　　 '+ args_Poster + ' was not An Impostor.　 。　.\n                \n                　　\'　　　 0 Impostors remain 　 　　。\n                \n                　　ﾟ　　　.　　　. ,　　　　.　       .      ,\n                  .  　　.　　　 　　.　　　　　。　　 。　. 　\`\`\`');
+            message.channel.send('\`\`\`                    . 　　　。　　　　•　 　ﾟ　　。 　　.\n           \n                　　　.　　　 　　.　　　　　。　　 。　. 　\n                \n                .　　 。　　　　　 ඞ 。 . 　　 • 　　　　•\n                \n                　　ﾟ　　 '+ args_Poster + ' was not An Impostor.　 。　.\n                \n                　　\'　　　 1 Impostors remain 　 　　。\n                \n                　　ﾟ　　　.　　　. ,　　　　.　       .      ,\n                  .  　　.　　　 　　.　　　　　。　　 。　. 　\`\`\`');
         } 
         
         else if (RAND_gen == 2, RAND_gen == 3, RAND_gen == 4) {
