@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'embed',
+    name: 'reactembed',
     decription: 'Creates an embedded message.',
     
     async run (client, message, args) {
@@ -17,7 +17,7 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
         .setTitle("Games")
-        .setColor('f1c40f')
+        .setColor('FEFEFE')
         .setThumbnail("http://i.imgur.com/p2qNFag.png")
         .addField("This is a field title, it can hold 256 characters","This is a field value, it can hold 1024 characters.")
         .setFooter("React by clicking the icons below")

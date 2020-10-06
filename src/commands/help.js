@@ -12,7 +12,7 @@ module.exports = {
     
         const embed = new Discord.MessageEmbed()
         .setTitle('Command List')
-        .setColor('FAA61A')
+        .setColor('FEFEFE')
         .setDescription('The prefix is set to ' + process.env.PREFIX + '.')
         .addField('General',  process.env.PREFIX + 'help\n' + process.env.PREFIX + 'ping\n'  + process.env.PREFIX + 'say\n' + process.env.PREFIX + 'random')
         .addField('Miscellaneous', process.env.PREFIX + 'strat\n' + process.env.PREFIX + 'w2g\n' + process.env.PREFIX + 'vote\n' + process.env.PREFIX + 'foundry')
