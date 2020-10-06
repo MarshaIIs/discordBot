@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 
 module.exports = {
     name: 'ping',
-    decription: 'Respons to m!ping command with "Pong".',
+    decription: 'Responds to the command with a ping latency.',
     
     async run (client, message, args) {
         
@@ -11,8 +11,8 @@ module.exports = {
 
         const ping = new Discord.MessageEmbed()
         .setTitle('Pong! 🏓')
-        .setColor('FAA61A')
-        .setDescription(`\`${message.createdTimestamp - Date.now()}\` clock time`);
+        .setColor('FEFEFE')
+        .setDescription(`\`${message.createdTimestamp - Date.now()}\` ms`);
         message.channel.send(ping);
     }
 }

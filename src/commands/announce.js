@@ -16,12 +16,12 @@ module.exports = {
             perm_msg = new Discord.MessageEmbed()
             .setTitle('Error!')
             .setColor('ff3333')
-            .setDescription('You do not have permission to use that command!')
+            .setDescription('You do not have permission to use that command!');
 
             return message.channel.send(perm_msg);
         }
         
-        if (args.length === 0) return message.reply("Please write a message to announce.");
+        if (args.length === 0) return message.reply('the proper usage is ' + process.env.PREFIX + 'announce <message>.');
         console.log(args);
         const msg = args.join(' ');
         console.log(msg);

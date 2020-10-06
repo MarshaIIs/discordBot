@@ -10,7 +10,7 @@ module.exports = {
             perm_msg = new Discord.MessageEmbed()
                 .setTitle('Error!')
                 .setColor('ff3333')
-                .setDescription('You do not have permission to use that command!')
+                .setDescription('You do not have permission to use that command!');
 
             return message.channel.send(perm_msg);
         }
