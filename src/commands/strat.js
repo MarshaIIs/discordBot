@@ -7,7 +7,7 @@ module.exports = {
     decription: 'Generates a random strat roulette for siege, based on which team is inputted (ATK/DEF).',
     
     async run (client, message, args) {
-        if (args.length === 0) return message.reply("please provide a team! (**Attacker** or **Defender**)");
+        if (args.length === 0) return message.reply(args + ' is not a valid team! The proper usage is ' + process.env.PREFIX + 'random <team>.');
         console.log(args);
         const RAND = Math.floor(Math.random() * strats.def.length);
 
@@ -19,7 +19,7 @@ module.exports = {
 
             const def_msg = new Discord.MessageEmbed()
             //.setTitle('Defender strat:')
-            .setColor('0083ff')
+            .setColor('1B6BFF')
             .addField(`${chosenStrat.title}`, `${chosenStrat.body}`);
             message.channel.send(def_msg);
         } 
@@ -32,13 +32,13 @@ module.exports = {
 
             const atk_msg = new Discord.MessageEmbed()
             //.setTitle('Attacker strat:')
-            .setColor('e91313')
+            .setColor('FF831B')
             .addField(`${chosenStrat.title}`, `${chosenStrat.body}`);
             message.channel.send(atk_msg);
         }
         
         else {
-            message.reply("please provide a valid team! Either **Attacker** or **Defender**!")
+            message.reply(args + ' is not a valid team! The proper usage is ' + process.env.PREFIX + 'random <team>.')
         }
     }
 }

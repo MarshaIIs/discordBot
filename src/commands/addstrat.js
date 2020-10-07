@@ -26,7 +26,7 @@ module.exports = {
                          
                 }
                 else {
-                    message.reply("Please provide a valid team! Either **Attacker** or **Defender**!")
+                    message.reply('the proper usage is ' + process.env.PREFIX + 'strat <_team_>.')
                 }
                 
                 fs.writeFile("src/database/strats/strats.json", JSON.stringify(json), function(err, result) {

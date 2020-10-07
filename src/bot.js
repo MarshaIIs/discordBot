@@ -15,7 +15,7 @@ for(const file of commandFiles){
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`);
     client.user.setPresence({
-        status: 'idle',  // online, idle, dnd
+        status: 'dnd',  // online, idle, dnd
         activity: {
             name: 'you... \👀',  // The message shown
             type: 'WATCHING' // PLAYING, WATCHING, LISTENING, STREAMING,
