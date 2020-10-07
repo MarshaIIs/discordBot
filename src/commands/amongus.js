@@ -6,6 +6,16 @@ module.exports = {
 
     async run (client, message, args) {
         
+
+        class Player {
+            constructor(user){
+                this.user = user
+                this.isDead = false;
+                this.isImposter = false;
+                this.hasVoted = false;
+            }
+        }
+
         class GameSession {
 
             //Game session class. Contains voiceChannel in which the game is based (voice channel that the calling player is sitting in)
@@ -15,8 +25,8 @@ module.exports = {
               this.caller = message.author;
               this.voiceChannel = message.guild.member(message.author.id).voice.channel;
 
+              //array of instances of Player class
               this.players = [];
-              this.imposter = {};
             }
 
             init(){
@@ -24,12 +34,17 @@ module.exports = {
 
                 //VoiceChannel.members returns Collection<Snowflake, GuildMember>, so we need to pull both out on iteration 
                 for ( let [snowflake, guildMember] of this.voiceChannel.members ){
-                     this.players.push(guildMember.user)
+
+                    //Create player class out of the members of voice channel and add them to players[]
+                    var player = new Player(guildMember.user)
+                    this.players.push(player)
+
                 }
 
 
                 //Rand assign imposter from players array
                 const RAND = Math.floor(Math.random() * this.players.length);
+                this.players[RAND].isImposter = true;
                 this.imposter = this.players[RAND];
 
                 //Spit out results
@@ -38,12 +53,12 @@ module.exports = {
                 console.log("Voice channel: " + this.voiceChannel.name + " (" + this.voiceChannel.id + ")")
                 console.log("--------------------------------------------------------------")
 
-                console.log("Imposter: \n" + this.imposter.username + " (" + this.imposter.id +")")
+                console.log("Imposter: \n" + this.imposter.user.username + " (" + this.imposter.user.id +")")
                 console.log("")
 
                 console.log("Players:")
                 this.players.forEach(player => {
-                    console.log(player.username + " (" + player.id + ")")
+                    console.log(player.user.username + " (" + player.user.id + ")")
                 })
 
 
