@@ -13,6 +13,7 @@ module.exports = {
                 this.isDead = false;
                 this.isImposter = false;
                 this.hasVoted = false;
+        
             }
         }
 
@@ -60,15 +61,21 @@ module.exports = {
                 this.players.forEach(player => {
                     console.log(player.user.username + " (" + player.user.id + ")")
                 })
+  
+            }
 
+            startVoting(){
 
-                
             }
 
         }
 
         const Game = new GameSession();
         Game.init();
+        Game.imposter.user.send("You are the imposter!")
+        Game.startVoting()
+
+        
 
  
         
