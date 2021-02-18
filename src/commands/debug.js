@@ -23,6 +23,7 @@ module.exports = {
         console.log('Author ID:  ' + message.author.id)
         console.log('Mentioned User:  ' + message.mentions.users.first())
 
-        message.guild.members.cache.get('257866388557922314').send('test');
+        //message.guild.members.cache.get('257866388557922314').send('test');
+        console.log('VC ID ' + message.member.voice.channel);
     }
 }

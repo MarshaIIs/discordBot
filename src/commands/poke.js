@@ -30,7 +30,7 @@ module.exports = {
         if (!message.mentions.members.first() || message.mentions.has(client.user)) return message.reply('the proper usage is ' + process.env.PREFIX + 'poke <USER MENTION>');
 
         else {
-            let gifTag    = 'idiot'; 
+            let gifTag    = 'wake up'; 
             let pokedUser = message.mentions.users.first().id;
             let author    = message.author.id;
 
@@ -41,12 +41,23 @@ module.exports = {
                 gifTag = tagArray.toLowerCase();
             }
 
+            if (message.member.voice.channel != null) {
+                let invite = await message.member.voice.channel.createInvite(
+                    {
+                        maxAge: 3600, // maximum time for the invite, in milliseconds
+                        maxUses: 1 // maximum times it can be used
+                    },
+                    `Requested with command by ${message.author.tag} using the Poke command`
+                )
+                .catch(console.log);
+            
+                message.guild.members.cache.get(pokedUser).send(invite ? `${invite}` : "There has been an error during the creation of the invite.");
+            }
+
             message.reply(message.mentions.users.first().username + ' has been poked!')
 
             gifGenerator(gifTag)
             .then((res) => {
-                console.log(res)
-        
                 console.log('Tag: ' + gifTag)
                 console.log('giphy res: ' + res.data.images.id);
                 gifGen = res.data.images.id
