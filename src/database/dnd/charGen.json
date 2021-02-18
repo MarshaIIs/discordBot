@@ -1,0 +1,1045 @@
+{
+    "charGenJSON": {
+        "race": [
+            {
+                "title": "Aarakocra",
+                "source": "EEPC"
+            },
+			{
+                "title": "Aasimar",
+                "source": "VGTM"
+            },
+			{
+                "title": "Bugbear",
+                "source": "VGTM"
+            },	
+			{
+                "title": "Centaur",
+                "source": "EEPC/VGTM/MOoT"
+            },	
+			{
+                "title": "Changeling",
+                "source": "ERLW"
+            },	
+			{
+                "title": "Dragonborn",
+                "source": "PHB"
+            },	
+			{
+                "title": "Dwarf",
+                "source": "PHB"
+            },	
+			{
+                "title": "Elf",
+                "source": "PHB"
+            },	
+			{
+                "title": "Firbolg",
+                "source": "VGTM"
+            },	
+			{
+                "title": "Genasi",
+                "source": "EEPC"
+            },	
+			{
+                "title": "Gith",
+                "source": "MToF"
+            },	
+			{
+                "title": "Gnome",
+                "source": "PHB"
+            },	
+			{
+                "title": "Goblin",
+                "source": "VGTM"
+            },	
+			{
+                "title": "Goliath",
+                "source": "EEPC/VGTM"
+            },	
+			{
+                "title": "Half-Elf",
+                "source": "PHB"
+            },	
+			{
+                "title": "Half-Orc",
+                "source": "PHB"
+            },
+			{
+                "title": "Halfling",
+                "source": "PHB"
+            },
+			{
+                "title": "Hobgoblin",
+                "source": "VGTM"
+            },
+			{
+                "title": "Human",
+                "source": "PHB"
+            },
+			{
+                "title": "Kalashtar",
+                "source": "ERLW"
+            },
+			{
+                "title": "Kenku",
+                "source": "VGTM"
+            },
+			{
+                "title": "Kobold",
+                "source": "VGTM"
+            },
+			{
+                "title": "Leonin",
+                "source": "MOoT"
+            },
+			{
+                "title": "Lizardfolk",
+                "source": "VGTM"
+            },
+			{
+                "title": "Loxodon",
+                "source": "GGtR"
+            },
+			{
+                "title": "Minotaur",
+                "source": "GGtR/MOoT"
+            },
+			{
+                "title": "Orc",
+                "source": "ERLW"
+            },
+			{
+                "title": "Satyr",
+                "source": "MOoT"
+            },
+			{
+                "title": "Shifter",
+                "source": "ERLW"
+            },
+			{
+                "title": "Simic Hybrid",
+                "source": "GGtR"
+            },
+			{
+                "title": "Tabaxi",
+                "source": "VGTM"
+            },
+			{
+                "title": "Tiefling",
+                "source": "PHB"
+            },
+			{
+                "title": "Tortle",
+                "source": "TP"
+            },
+			{
+                "title": "Triton",
+                "source": "MOoT/VGTM"
+            },
+			{
+                "title": "Vedalken",
+                "source": "GGtR"
+            },
+			{
+                "title": "Verdan",
+                "source": "AcInc"
+            },
+			{
+                "title": "Warforged",
+                "source": "ERLW"
+            },
+			{
+                "title": "Yuan-Ti Pureblood",
+                "source": "VGTM"
+            }			
+        ],
+        "class": [
+			{
+                "title": "Artificer"
+            },
+			{
+                "title": "Barbarian"
+            },	
+			{
+                "title": "Bard"
+            },	
+			{
+                "title": "Cleric"
+            },	
+			{
+                "title": "Druid"
+            },	
+			{
+                "title": "Fighter"
+            },	
+			{
+                "title": "Monk"
+            },	
+			{
+                "title": "Paladin"
+            },	
+			{
+                "title": "Ranger"
+            },	
+			{
+                "title": "Rogue"
+            },	
+			{
+                "title": "Sorcerer"
+            },	
+			{
+                "title": "Warlock"
+            },	
+			{
+                "title": "Wizard"
+            }			
+        ],
+        "subrace": [
+			{
+                "aarakocra": [
+                    {
+                        "sub": "regular",
+                        "source": "PHB"
+                    }
+                ],
+                "aasimar": [
+                    {
+                        "sub": "Fallen",
+                        "source": "VGTM"
+                    },
+                    {
+                        "sub": "Protector",
+                        "source": "VGTM"
+                    },
+                    {
+                        "sub": "Scourge",
+                        "source": "VGTM"
+                    }
+                ],
+                "bugbear": [
+                    {
+                        "sub": "regular",
+                        "source": "VGTM"
+                    }
+                ],
+                "centaur": [
+                    {
+                        "sub": "regular",
+                        "source": "GGtR"
+                    }
+                ],
+                "changeling": [
+                    {
+                        "sub": "regular",
+                        "source": "ERLW"
+                    }
+                ],
+                "dragonborn": [
+                    {
+                        "sub": "regular",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Draconblood",
+                        "source": "EGtW"
+                    },
+                    {
+                        "sub": "Ravenite",
+                        "source": "EGtW"
+                    }
+                ],
+                "dwarf": [
+                    {
+                        "sub": "Duergar",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Hill",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Mark of Warding",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Mountain",
+                        "source": "PHB"
+                    }
+                ],
+                "elf": [
+                    {
+                        "sub": "Drow",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Eladrin",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "High",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Mark of Shadows",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Pallid",
+                        "source": "EGtW"
+                    },
+                    {
+                        "sub": "Sea",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Shadar-Kai",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Wood",
+                        "source": "PHB"
+                    }
+                ],
+                "firbolg": [
+                    {
+                        "sub": "regular",
+                        "source": "VGTM"
+                    }
+                ],
+                "genasi": [
+                    {
+                        "sub": "Air",
+                        "source": "EEPC"
+                    },
+                    {
+                        "sub": "Earth",
+                        "source": "EEPC"
+                    },
+                    {
+                        "sub": "Fire",
+                        "source": "EEPC"
+                    },
+                    {
+                        "sub": "Water",
+                        "source": "EEPC"
+                    }
+                ],
+                "gith": [
+                    {
+                        "sub": "Githyanki",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Githzerai",
+                        "source": "MToF"
+                    }
+                ],
+                "gnome": [
+                    {
+                        "sub": "Deep",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Deep/Svirfneblin",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Forest",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Mark of Scribing",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Rock",
+                        "source": "PHB"
+                    }
+                ],
+                "goblin": [
+                    {
+                        "sub": "regular",
+                        "source": "VGTM"
+                    }
+                ],
+                "goliath": [
+                    {
+                        "sub": "regular",
+                        "source": "VGTM"
+                    }
+                ],
+                "half-elf": [
+                    {
+                        "sub": "Variant",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Variant; Aquatic Elf Descent",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Variant; Drow Descent",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Variant; Mark of Detection",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Variant; Mark of Storm",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Variant; Moon elf or Sun Elf descent",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Variant; Wood Elf Descent",
+                        "source": "SCAG"
+                    }
+                ],
+                "half-orc": [
+                    {
+                        "sub": "regular",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Mark of Finding",
+                        "source": "ERLW"
+                    }
+                ],
+                "halfling": [
+                    {
+                        "sub": "Ghostwise",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Lightfoot",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Lotusden",
+                        "source": "EGtW"
+                    },
+                    {
+                        "sub": "Mark of Healing",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Mark of Hospitality",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Stout",
+                        "source": "PHB"
+                    }
+                ],
+                "hobgoblin": [
+                    {
+                        "sub": "regular",
+                        "source": "VGTM"
+                    }
+                ],
+                "human": [
+                    {
+                        "sub": "regular",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Mark of Finding",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Mark of Handling",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Mark of Making",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Mark of Passage",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Mark of Sentinel",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Variant",
+                        "source": "PHB"
+                    }
+                ],
+                "kalashtar": [
+                    {
+                        "sub": "regular",
+                        "source": "ERLW"
+                    }
+                ],
+                "kenku": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ],
+                "kobold": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ],
+                "leonin": [
+                    {
+                        "sub": "regular",
+                        "source": "MOoT"
+                    }
+                ],
+                "lizardfolk": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ],
+                "loxodon": [
+                    {
+                        "sub": "regular",
+                        "source": "GGtR"
+                    }
+                ],
+                "minotaur": [
+                    {
+                        "sub": "regular",
+                        "source": "GGtR"
+                    }
+                ],
+                "orc": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ],
+                "satyr": [
+                    {
+                        "sub": "regular",
+                        "source": "MOoT"
+                    }
+                ],
+                "shifter": [
+                    {
+                        "sub": "Beasthide",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Longtooth",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Swiftstride",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Wildhunt",
+                        "source": "ERLW"
+                    }
+                ],
+                "simic-hybrid": [
+                    {
+                        "sub": "regular",
+                        "source": "GGtR"
+                    }
+                ],
+                "tabaxi": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ],
+                "tiefling": [
+                    {
+                        "sub": "Asmodeus",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Baalzebul",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "regular",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Dispater",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Fierna",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Glasya",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Levistus",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Mammon",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Mephistopheles",
+                        "source": "MToF"
+                    },
+                    {
+                        "sub": "Variant; Devil's Tongue",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Variant; Hellfire",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Variant; Infernal Legacy",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Variant; Winged",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Zariel",
+                        "source": "MToF"
+                    }
+                ],
+                "tortle": [
+                    {
+                        "sub": "regular",
+                        "source": "TP"
+                    }
+                ],
+                "triton": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ],
+                "vedalken": [
+                    {
+                        "sub": "regular",
+                        "source": "GGtR"
+                    }
+                ],
+                "verdan": [
+                    {
+                        "sub": "regular",
+                        "source": "AcInc"
+                    }
+                ],
+                "warforged": [
+                    {
+                        "sub": "regular",
+                        "source": "ERLW"
+                    }
+                ],
+                "yuan-ti-pureblood": [
+                    {
+                        "sub": "regular",
+                        "source": "VGtM"
+                    }
+                ]
+            }
+		],
+		"subclass": [
+			{
+                "artificer": [
+                    {
+                        "sub": "Alchemist",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Artillerist",
+                        "source": "ERLW"
+                    },
+                    {
+                        "sub": "Battle Smith",
+                        "source": "ERLW"
+                    }
+                ],
+                "barbarian": [
+                    {
+                        "sub": "Path of the Ancestral Guardian",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Path of the Battlerager",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Path of the Berserker",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Path of the Storm Herald",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Path of the Totem Warrior",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Path of the Zealot",
+                        "source": "XGtE"
+                    }
+                ],
+                "bard": [
+                    {
+                        "sub": "College of Eloquence",
+                        "source": "MOoT"
+                    },
+                    {
+                        "sub": "College of Glamour",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "College of Lore",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "College of Swords",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "College of Valour",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "College of Whispers",
+                        "source": "XGtE"
+                    }
+                ],
+                "cleric": [
+                    {
+                        "sub": "Arcana Domain",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Death Domain",
+                        "source": "DMG"
+                    },
+                    {
+                        "sub": "Forge Domain",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Grave Domain",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Knowledge Domain",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Life Domain",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Light Domain",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Nature Domain",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Order Domain",
+                        "source": "GGtR"
+                    },
+                    {
+                        "sub": "Tempest Domain",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Trickery Domain",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "War Domain",
+                        "source": "PHB"
+                    }
+                ],
+                "druid": [
+                    {
+                        "sub": "Circle of Dreams",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Circle of Land",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Circle of Moon",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Circle of Shepherd",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Circle of Spores",
+                        "source": "GGtR"
+                    }
+                ],
+                "fighter": [
+                    {
+                        "sub": "Arcane Archer",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Battle Master",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Cavalier",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Champion",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Echo Knight",
+                        "source": "EGtW"
+                    },
+                    {
+                        "sub": "Eldritch Knight",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Purple Dragon Knight",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Samurai",
+                        "source": "XGtE"
+                    }
+                ],
+                "monk": [
+                    {
+                        "sub": "Way of the Drunken Master",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Way of the Four Elements",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Way of the Kensei",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Way of the Long Death",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Way of the Open Hand",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Way of the Shadow",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Way of the Sun Soul",
+                        "source": "SCAG"
+                    }
+                ],
+                "paladin": [
+                    {
+                        "sub": "Oath of the Ancients",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Oath of Conquest",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Oath of the Crown",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Oath of Devotion",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Oath of Glory",
+                        "source": "MOoT"
+                    },
+                    {
+                        "sub": "Oathbreaker",
+                        "source": "DMG"
+                    },
+                    {
+                        "sub": "Oath of Redemption",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Oath of Vengeance",
+                        "source": "PHB"
+                    }
+                ],
+                "ranger": [
+                    {
+                        "sub": "Beast Master",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Gloom Stalker",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Horizon Walker",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Hunter",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Monster Slayer",
+                        "source": "XGtE"
+                    }
+                ],
+                "rogue": [
+                    {
+                        "sub": "Arcane Trickster",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Assassin",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Inquisitive",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Mastermind",
+                        "source": "SCAG/XGtE"
+                    },
+                    {
+                        "sub": "Scout",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Swashbuckler",
+                        "source": "SCAG/XGtE"
+                    },
+                    {
+                        "sub": "Thief",
+                        "source": "PHB"
+                    }
+                ],
+                "sorcerer": [
+                    {
+                        "sub": "Divine Soul",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Draconic Bloodline",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Shadow Magic",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "Storm Sorcery",
+                        "source": "SCAG/XGtE"
+                    },
+                    {
+                        "sub": "Wild Magic",
+                        "source": "PHB"
+                    }
+                ],
+                "warlock": [
+                    {
+                        "sub": "The Archfey",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "The Celestial",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "The Fiend",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "The Great Old One",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "The Hexblade",
+                        "source": "XGtE"
+                    },
+                    {
+                        "sub": "The Undying",
+                        "source": "SCAG"
+                    }
+                ],
+                "wizard": [
+                    {
+                        "sub": "School of Abjuration",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Bladesinging",
+                        "source": "SCAG"
+                    },
+                    {
+                        "sub": "Chronurgy Magic",
+                        "source": "EGtW"
+                    },
+                    {
+                        "sub": "School of Conjuration",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "School of Divination",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "School of Enchantment",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "School of Evocation",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "Graviturgy Magic",
+                        "source": "EGtW"
+                    },
+                    {
+                        "sub": "School of Illusion",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "School of Necromancy",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "School of Transmutation",
+                        "source": "PHB"
+                    },
+                    {
+                        "sub": "War Magic",
+                        "source": "XGtE"
+                    }
+                ]
+            }
+		]
+    }
+}

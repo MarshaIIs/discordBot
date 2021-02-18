@@ -1,10 +1,42 @@
+const Discord = require('discord.js');
 var fs = require("fs");
+
+function channelCheck(message) {
+    /* 687306978443132958 = #bot-spam
+     * 624299862464135170 = #voicechat
+     * 634050395336998933 = #cmd-testing
+     */
+
+    if(!(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')) {
+        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
+            msg.delete({ timeout: 30000 })
+        })
+        .catch(console.error);
+        
+        return false;
+    }
+}
 
 module.exports = {
     name: "addstrat",
-    description: "Adds strats to the stratroullette command. Accepts text input or TXT file input (dev only).",
+    description: "This command adds strats to the Stratroullette command. The command accepts text input or a .txt file.",
+    type: 'utility',
+    args: true,
+    usage: "<file> <team>",
 
     async run (client, message, args) {
+        if(channelCheck(message) == false) return;
+
+        if   (!message.member.hasPermission('ADMINISTRATOR')) {
+            console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
+            perm_msg = new Discord.MessageEmbed()
+                .setTitle('Error!')
+                .setColor('db0606')
+                .setDescription('You do not have permission to use that command!');
+
+            return message.channel.send(perm_msg);
+        }
+
         if (args[0] === "inputfile"){
             var text = fs.readFileSync("src/database/strats/" + args[1]).toString('utf-8');
             var textByLine = text.split("\n");

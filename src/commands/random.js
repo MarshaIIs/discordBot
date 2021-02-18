@@ -3,6 +3,7 @@ const Discord = require('discord.js')
 module.exports = {
 	name: 'random',
     decription: 'Type and integer and the program will roll a number between 1 and said integer.',
+    type: 'fun',
 	//aliases: ['dice', 'rolldice', 'roll'],
 	
     async run (client, message, args) {
@@ -14,7 +15,7 @@ module.exports = {
         
         const msg = new Discord.MessageEmbed()
         .setTitle('Your random number is: ' + RAND())
-        .setColor('FEFEFE');
+        .setColor('f04747');
         message.channel.send(msg);
-    },
+    }
 }
