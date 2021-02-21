@@ -1,22 +1,6 @@
 const Discord = require('discord.js')
 const pongSent = new Set();
 
-function channelCheck(message) {
-    /* 687306978443132958 = #bot-spam
-     * 624299862464135170 = #voicechat
-     * 634050395336998933 = #cmd-testing
-     */
-
-    if(!(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')) {
-        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
-            msg.delete({ timeout: 30000 })
-        })
-        .catch(console.error);
-        
-        return false;
-    }
-}
-
 module.exports = {
     name: 'pong',
     decription: 'This command responds to dumbos who cant type \"ping\".',
@@ -26,14 +10,15 @@ module.exports = {
     async run (client, message, args) {
         if(channelCheck(message) == false) return;
 
-        if (pongSent.has(message.author.id)) {
+        if (pongSent.has(message.author.id)) 
+        {
             message.reply("cool off bud.").then(msg => {
                 msg.delete({ timeout: 15000 })
             })
             .catch(console.error);
-            } 
-            
-        else {
+        } 
+        else 
+        {
             // Adds the user to the set so that they can't talk for a bit
             let muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
             message.member.roles.add(muteRole)
@@ -41,8 +26,8 @@ module.exports = {
 
             // Removes the user from the set after X amount of time
             setTimeout(() => {
-            pongSent.delete(message.author.id);
-            message.member.roles.remove(muteRole)
+                pongSent.delete(message.author.id);
+                message.member.roles.remove(muteRole)
             }, 120000);
 
             // The messages BEGIN! 
@@ -88,5 +73,26 @@ module.exports = {
                 .catch(console.error);
             }, 15000)
         }
+    }
+}
+
+function channelCheck(message) {
+    /* 687306978443132958 = #bot-spam
+     * 624299862464135170 = #voicechat
+     * 634050395336998933 = #cmd-testing
+     */
+
+    if(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933') {
+        // Return true if message is sent in one of the listed channels. 
+        return true;
+    }
+    else {
+        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
+            msg.delete({ timeout: 30000 })
+        })
+        .catch(console.error);
+        
+        // Return false if channel is not one of the listed channels
+        return false;
     }
 }

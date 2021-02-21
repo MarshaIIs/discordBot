@@ -28,7 +28,8 @@ module.exports = {
         let allowedRole = message.guild.roles.cache.get('763152855355621396', '763144718590410812');
         //console.debug('if thing: ' + message.member.roles.cache.some(role => role.name === 'Clear perms'))
 
-        if (!message.member.hasPermission('ADMINISTRATOR') && !message.member.roles.cache.some(role => role.name === 'Clear perms')) {
+        if (!message.member.hasPermission('ADMINISTRATOR') && !message.member.roles.cache.some(role => role.name === 'Clear perms'))
+        {
             console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
             perm_msg = new Discord.MessageEmbed()
                 .setTitle('Error!')
@@ -37,15 +38,15 @@ module.exports = {
 
             return message.channel.send(perm_msg);
         }
-
-        else if (message.member.roles.cache.some(role => role.name === 'Clear perms')) {
+        else if (message.member.roles.cache.some(role => role.name === 'Clear perms'))
+        {
             if(!amount) return message.reply('the proper usage is ' + process.env.PREFIX + 'clear <number>.');
             if((amount-1) >= 10) return message.reply('you cannot clear more than 10 messages at once');
             if((amount-1) <= 1) return message.reply('you need to delete at least one message');
             deleteMessages();
         }
-
-        else {
+        else
+        {
             if(!amount) return message.reply('the proper usage is ' + process.env.PREFIX + 'clear <number>.');
             if((amount-1) > 100) return message.reply('you cannot clear more than 100 messages at once');
             if((amount-1) <= 1) return message.reply('you need to delete at least one message');

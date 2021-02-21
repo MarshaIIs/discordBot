@@ -32,10 +32,10 @@ client.on('message', async (message) => {
     .split(/\s+/);
 
     //If the bot is ever mentioned, it will respond with a list of commands.
-    if (message.mentions.has(client.user)) {
-        message.reply("here is a list of commands!");
-        client.commands.get("help").run(client, message);
-    };
+    // if (message.mentions.has(client.user)) {
+    //     message.reply("here is a list of commands!");
+    //     client.commands.get("help").run(client, message);
+    // };
 
     if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
     if (message.channel.type === 'dm' && command !== "anon") return;

@@ -7,7 +7,8 @@ module.exports = {
     usage: "kill",
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR')) {
+        if (!message.member.hasPermission('ADMINISTRATOR'))
+        {
             console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
             perm_msg = new Discord.MessageEmbed()
                 .setTitle('Error!')
@@ -16,8 +17,8 @@ module.exports = {
 
             return message.channel.send(perm_msg);
         }
-        
-        else {
+        else
+        {
 			message.channel.send('Stopping bot...').then(() => {
 				process.exit(1);
             })

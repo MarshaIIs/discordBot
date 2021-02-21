@@ -1,21 +1,5 @@
 const Discord = require('discord.js');
 
-function channelCheck(message) {
-    /* 687306978443132958 = #bot-spam
-     * 624299862464135170 = #voicechat
-     * 634050395336998933 = #cmd-testing
-     */
-
-    if(!(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')) {
-        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
-            msg.delete({ timeout: 30000 })
-        })
-        .catch(console.error);
-        
-        return false;
-    }
-}
-
 module.exports = {
     name: 'help',
     decription: 'This command lists all current commands.',
@@ -23,7 +7,7 @@ module.exports = {
     usage: "help",
     
     async run (client, message, args) {
-        if(channelCheck(message) == false) return;
+        if (channelCheck(message) == false) return;
 
         //message.reply('here is a list of commands:\n');
         //message.channel.send('\`\`\`\n┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐\n│                                          GENERAL COMMANDS                                           │\n├─────────────────────────────────────────────────────────────────────────────────────────────────────│\n│NAME        DESCRIPTION                                                 ALIAS                        │\n│Help        List of all commands                                        Commands                     │\n│Ping        Responds with Pong!                                                                      │\n│Random‎      ‎‎‎Returns a random number between inputted number and 1.      ‎‎‎Roll, Dice, RollDice         │\n│W2G         Generates a Watch2Gether room and outputs link.             Watch2Gether, SyncVideo, SV  │\n│Strat       ‏‏‎Generates a Rainbow Six Siege Strat Roulette.               defender, attacker           │\n│Vote        Vote someone off the ship                                   Eject                        │\n└─────────────────────────────────────────────────────────────────────────────────────────────────────┘\n\`\`\`');
@@ -41,5 +25,28 @@ module.exports = {
         .addField('Private Message Only', process.env.PREFIX + 'anon info\n' + process.env.PREFIX + 'anon vote *<NAME>*\n' + process.env.PREFIX + 'anon praise *<NAME>* *[MESSAGE]*\n' + process.env.PREFIX + 'anon complaint *<NAME>* *[MESSAGE]*\n' + process.env.PREFIX + 'anon undo')
         .setFooter('Feel free to suggest new features.')
         message.channel.send(embed);
+    }
+}
+
+function channelCheck(message) {
+    /* 687306978443132958 = #bot-spam
+     * 624299862464135170 = #voicechat
+     * 634050395336998933 = #cmd-testing
+     */
+
+    if(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
+    {
+        // Return true if message is sent in one of the listed channels. 
+        return true;
+    }
+    else
+    {
+        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
+            msg.delete({ timeout: 30000 })
+        })
+        .catch(console.error);
+        
+        // Return false if channel is not one of the listed channels
+        return false;
     }
 }

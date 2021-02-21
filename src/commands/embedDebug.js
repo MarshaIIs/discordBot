@@ -6,7 +6,8 @@ module.exports = {
     type: 'debug',
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR')) {
+        if (!message.member.hasPermission('ADMINISTRATOR')) 
+        {
             console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
             perm_msg = new Discord.MessageEmbed()
                 .setTitle('Error!')
@@ -17,7 +18,8 @@ module.exports = {
         }
 
         // DND Explanation
-        if (args[0] == '1') {
+        if (args[0] == '1')
+        {
             const statEmbed1 = new Discord.MessageEmbed()
                 .setTitle("Dungeoneers")
                 .setColor('7be6ee')
@@ -58,9 +60,9 @@ module.exports = {
             message.delete();
             })
         }
-
         // Testing Reaction Roles
-        else if (args[0] == '2') {
+        else if (args[0] == '2')
+        {
             const statEmbed3 = new Discord.MessageEmbed()
             .setTitle('Games')
             .setColor('db0606')
@@ -78,8 +80,8 @@ module.exports = {
             .setFooter('Click icons below to add desired role.')
         message.channel.send(statEmbed3);
         }
-
-        else if (args[0] == '3' && !isNaN(args[1]) && !isNaN(args[2])) {
+        else if (args[0] == '3' && !isNaN(args[1]) && !isNaN(args[2]))
+        {
             // const channel = client.channels.cache.get("762301953995702322");
             // const msg = channel.messages.cache.get('798668136907931659');
             try {
@@ -103,13 +105,12 @@ module.exports = {
 
                     msg.edit(editEmbed)
                 })
-            } 
-            
-            catch (error){
+            }
+            catch (error)
+            {
                 message.reply('an error occurred! \nPlease verify the Channel ID and the Message ID')
             }
         }
-
         else message.reply("use args 1, 2 or 3");
     }
 }

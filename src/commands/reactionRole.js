@@ -6,7 +6,8 @@ module.exports = {
     type: 'utility',
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR')) {
+        if (!message.member.hasPermission('ADMINISTRATOR')) 
+        {
             console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
             perm_msg = new Discord.MessageEmbed()
                 .setTitle('Error!')
@@ -15,9 +16,9 @@ module.exports = {
                 
             return message.channel.send(perm_msg);
         }
-
         // Send original Reaction Role message
-        else if (args[0] == 'msg') {
+        else if (args[0] == 'msg')
+        {
             const statEmbed3 = new Discord.MessageEmbed()
                 .setTitle('Roles')
                 .setColor('db0606')
@@ -41,9 +42,9 @@ module.exports = {
                 .setFooter('Click icons below to add desired role.')
             message.channel.send(statEmbed3);
         }
-
         // Edit original Reaction Role message
-        else if (args[0] == 'edit' && !isNaN(args[1]) && !isNaN(args[2])) {
+        else if (args[0] == 'edit' && !isNaN(args[1]) && !isNaN(args[2]))
+        {
             client.channels.cache.get(args[1]).messages.fetch(args[2])
             .then(msg => {
                 const editEmbed = new Discord.MessageEmbed()
@@ -71,7 +72,6 @@ module.exports = {
             })
             .catch(message.reply('an error occurred! Error: \n' + error))
         }
-
         else message.reply('args are either "msg", "edit" or ...DEBUG');
     }
 }

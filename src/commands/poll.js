@@ -1,23 +1,24 @@
 const Discord = require('discord.js')
 
 module.exports = {
-    name: 'ping',
-    decription: 'This command responds to the command with a ping latency.',
+    name: 'poll',
+    decription: '',
     type: 'general',
-    usage: 'ping',
+    usage: 'poll',
     
     async run (client, message, args) {
-        if(channelCheck(message) == false) return;
+        //if(channelCheck(message) == false) return;
 
-        console.log('timestamp: ' + message.createdTimestamp);
-        console.log('date: ' + Date.now());
-        pingGenerated = Math.abs(message.createdTimestamp - Date.now())
-
-        const ping = new Discord.MessageEmbed()
-            .setTitle('Pong! 🏓')
+        const pollEmbed = new Discord.MessageEmbed()
+            .setTitle('Dog or cat')
             .setColor('f04747')
-            .setDescription(`\`${pingGenerated}\` ms`);
-        message.channel.send(ping);
+            .addFields({ name: "Dog :one:"})
+            .addFields({ name: "Cat :two:"})
+            .setFooter('Vote by clicking the corresponding reaction below');
+        message.channel.send(pollEmbed);
+
+        message.react('1️⃣')
+        message.react('2️⃣')
     }
 }
 
@@ -27,7 +28,7 @@ function channelCheck(message) {
      * 634050395336998933 = #cmd-testing
      */
 
-    if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
+    if(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
     {
         // Return true if message is sent in one of the listed channels. 
         return true;

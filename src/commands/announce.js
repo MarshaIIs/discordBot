@@ -6,22 +6,6 @@ const webhookClient = new WebhookClient(
     process.env.WEBHOOK_TOKEN,
 );
 
-function channelCheck(message) {
-    /* 687306978443132958 = #bot-spam
-     * 624299862464135170 = #voicechat
-     * 634050395336998933 = #cmd-testing
-     */
-
-    if(!(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')) {
-        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
-            msg.delete({ timeout: 30000 })
-        })
-        .catch(console.error);
-        
-        return false;
-    }
-}
-
 module.exports = {
     name: 'announce',
     decription: 'This command sends an announcement in the #Announcements channel. The message is sent from a Webhook, not the bot itself.',
@@ -32,7 +16,8 @@ module.exports = {
     async run (client, message, args) {
         if(channelCheck(message) == false) return;
 
-        if   (!message.member.hasPermission('ADMINISTRATOR')) {
+        if (!message.member.hasPermission('ADMINISTRATOR'))
+        {
             console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
             perm_msg = new Discord.MessageEmbed()
                 .setTitle('Error!')
@@ -47,5 +32,28 @@ module.exports = {
         const msg = args.join(' ');
         console.log(msg);
         webhookClient.send(msg);
+    }
+}
+
+function channelCheck(message) {
+    /* 687306978443132958 = #bot-spam
+     * 624299862464135170 = #voicechat
+     * 634050395336998933 = #cmd-testing
+     */
+
+    if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
+    {
+        // Return true if message is sent in one of the listed channels. 
+        return true;
+    }
+    else
+    {
+        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
+            msg.delete({ timeout: 30000 })
+        })
+        .catch(console.error);
+        
+        // Return false if channel is not one of the listed channels
+        return false;
     }
 }

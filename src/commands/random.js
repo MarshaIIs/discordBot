@@ -7,15 +7,21 @@ module.exports = {
 	//aliases: ['dice', 'rolldice', 'roll'],
 	
     async run (client, message, args) {
-        if (args.length === 0) return message.reply('the proper usage is ' + process.env.PREFIX + 'random <number>.');
-        console.log(args);
-        const RAND_INT = args.join(' ');
-        console.log(RAND_INT);
-        const RAND = () => Math.floor(Math.random() * RAND_INT) + 1;
+        validateInput(args);
         
+        const RAND_INT = args.join(' ');
+        const rand = () => Math.floor(Math.random() * RAND_INT) + 1;
+
         const msg = new Discord.MessageEmbed()
-        .setTitle('Your random number is: ' + RAND())
-        .setColor('f04747');
+            .setTitle('Your random number is: ' + rand())
+            .setColor('f04747');
         message.channel.send(msg);
     }
 }
+
+function validateInput(args) {
+    if (args.length === 0 || typeof(args) == "number")
+    {
+        return message.reply('the proper usage is ' + process.env.PREFIX + 'random <number>.')
+    }
+} 

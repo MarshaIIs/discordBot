@@ -1,27 +1,11 @@
 const axios = require("axios");
 const Discord = require('discord.js');
 
-function channelCheck(message) {
-    /* 687306978443132958 = #bot-spam
-     * 624299862464135170 = #voicechat
-     * 634050395336998933 = #cmd-testing
-     */
-
-    if(!(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')) {
-        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
-            msg.delete({ timeout: 30000 })
-        })
-        .catch(console.error);
-        
-        return false;
-    }
-}
-
 module.exports = {
     name: 'w2g',
     decription: 'This command automatically generates a Watch2Gether link.',
     type: 'general',
-    usage: "w2g [LINK]",
+    usage: 'w2g [LINK]',
  
     async run (client, message, args) {
         if (channelCheck(message) == false) return;
@@ -54,5 +38,26 @@ module.exports = {
                 message.channel.send("An unknown error occured!")
             }
         });
+    }
+}
+
+function channelCheck(message) {
+    /* 687306978443132958 = #bot-spam
+     * 624299862464135170 = #voicechat
+     * 634050395336998933 = #cmd-testing
+     */
+
+    if(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933') {
+        // Return true if message is sent in one of the listed channels. 
+        return true;
+    }
+    else {
+        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
+            msg.delete({ timeout: 30000 })
+        })
+        .catch(console.error);
+        
+        // Return false if channel is not one of the listed channels
+        return false;
     }
 }
