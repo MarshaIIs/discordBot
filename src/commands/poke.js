@@ -1,6 +1,8 @@
 const Discord = require('discord.js')
 const GPH_API_CLIENT  = require('giphy-js-sdk-core');
 const Giphy = GPH_API_CLIENT(process.env.GIPHY_TOKEN)
+const Channel = require('../utility/validation/channelCheck.js');
+const CheckChannel = new Channel;
 
 module.exports = {
     name: 'poke',
@@ -10,7 +12,8 @@ module.exports = {
     usage: "<MENTION>",
     
     async run (client, message, args) {
-        //if(channelCheck(message) == false) return;
+        // if (CheckChannel.default(message) == false)
+        //     return;
 
         // Check if a user is mentioned or if the user mentioned is the bot itself.
         if (!message.mentions.members.first() || message.mentions.has(client.user)) 
@@ -84,22 +87,4 @@ async function voiceChannelCheck (msg) {
 // All of the Gif/Giphy related code was originally in the generateGif function, but a series of issues arose and now it is temporarily (read, permanently) in the main function
 function generateGif(tag) {
     return Giphy.random('gifs', {gifTag: tag})
-}
-
-function channelCheck(message) {
-    /* 687306978443132958 = #bot-spam
-     * 624299862464135170 = #voicechat
-     * 634050395336998933 = #cmd-testing
-     */
-
-    if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
-        return true;
-    else {
-        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
-            msg.delete({ timeout: 30000 })
-        })
-        .catch(console.error);
-        
-        return false;
-    }
 }

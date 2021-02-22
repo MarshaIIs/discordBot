@@ -1,4 +1,5 @@
-const Discord = require('discord.js');
+const Role = require('../utility/validation/roleCheck.js');
+const RoleCheck = new Role;
 
 module.exports = {
     name: 'clear',
@@ -7,7 +8,7 @@ module.exports = {
     usage: 'clear <NUMBER>',
     
     async run (client, message, args) {
-        if (clearRoleCheck(message) == false) 
+        if (RoleCheck.clear(message) == false) 
             return;
 
         let amount = args.join(" ");
@@ -36,23 +37,6 @@ module.exports = {
 
             deleteMessages(message, amount);
         }
-    }
-}
-
-function clearRoleCheck(message) {
-    if (message.member.hasPermission('ADMINISTRATOR') || message.member.roles.cache.some(role => role.name === 'Clear perms'))
-        return true;
-    else {
-        console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
-    
-        MISSING_PERMS_EMBED = new Discord.MessageEmbed()
-            .setTitle('Error!')
-            .setColor('db0606')
-            .setDescription('You do not have permission to use that command!');
-    
-        message.channel.send(MISSING_PERMS_EMBED);
-
-        return false;
     }
 }
 

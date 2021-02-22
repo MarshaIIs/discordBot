@@ -1,6 +1,6 @@
 {
   "name": "Sheriff",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "All in one bot by Marshall",
   "main": "bot.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "dev": "nodemon ./bot.js"
   },
   "keywords": [],
-  "author": "Marshall / Cattegun & Lynton",
+  "author": "Marshall & Lynton",
   "license": "ISC",
   "dependencies": {
     "FileReader": "^0.10.2",

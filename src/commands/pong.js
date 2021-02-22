@@ -1,4 +1,6 @@
 const Discord = require('discord.js')
+const Channel = require('../utility/validation/channelCheck.js');
+const CheckChannel = new Channel;
 const PONG_MSG_SET = new Set();
 
 // im aware its aids, also aware than its very very wrong
@@ -11,7 +13,7 @@ module.exports = {
     usage: "pong",
     
     async run (client, message, args) {
-        if (channelCheck(message) == false) 
+        if (CheckChannel.default(message) == false) 
             return;
 
         if (PONG_MSG_SET.has(message.author.id)) {
@@ -80,24 +82,5 @@ module.exports = {
                 .catch(console.error);
             }, 15000)
         }
-    }
-}
-
-function channelCheck(message) {
-    /* 687306978443132958 = #bot-spam
-     * 624299862464135170 = #voicechat
-     * 634050395336998933 = #cmd-testing
-     */
-
-    if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933') {
-        return true;
-    }
-    else {
-        message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
-            msg.delete({ timeout: 30000 })
-        })
-        .catch(console.error);
-        
-        return false;
     }
 }
