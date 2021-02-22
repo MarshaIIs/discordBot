@@ -1,5 +1,10 @@
-# Installation
+# Here be dragons...
+Alot of the code is very... interresting
+It is slowly being cleaned up, but there are certain commands that are just plain AIDS to look at, and its gonna take a few hours to simplify, clean and add comments to them.
+I'll do it eventually (read: never), but I prioritize commands that *work* over efficient commands that took alot of thought and planning
+Most efficiency comes with general experience anyway. Its easy to read a book and go "huh yeah that makes sense", but using it in practice is a matter of remembering and applying
 
+# Installation
 1) Install all dependencies with:
     `npm i`
 
