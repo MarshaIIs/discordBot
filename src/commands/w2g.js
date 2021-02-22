@@ -1,4 +1,4 @@
-const axios = require("axios");
+const AXIOS = require("axios");
 const Discord = require('discord.js');
 
 module.exports = {
@@ -8,10 +8,12 @@ module.exports = {
     usage: 'w2g [LINK]',
  
     async run (client, message, args) {
-        if (channelCheck(message) == false) return;
+        if (channelCheck(message) == false)
+            return;
 
         console.log(args[0])
-        axios.post("https://w2g.tv/rooms/create.json", { "w2g_api_key": process.env.w2gKey, "share":args[0] })
+
+        AXIOS.post("https://w2g.tv/rooms/create.json", { "w2g_api_key": process.env.w2gKey, "share":args[0] })
         .then(res => {
             console.log(res.data);
             const msg = new Discord.MessageEmbed()
@@ -21,13 +23,12 @@ module.exports = {
             message.channel.send(msg);
         })
         .catch(error => {
-            if (error.response){
+            if (error.response) {
                 console.log(error.response.data);
                 console.log(error.response.status);
                 console.log(error.response.headers);
                 message.channel.send("Woops. Seems an error occured here: " + error.response.status)
             }
-
             else if (error.request) {
                 // The request was made but no response was received
                 console.log(error.request);

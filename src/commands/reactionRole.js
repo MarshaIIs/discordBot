@@ -6,20 +6,12 @@ module.exports = {
     type: 'utility',
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR')) 
-        {
-            console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
-            perm_msg = new Discord.MessageEmbed()
-                .setTitle('Error!')
-                .setColor('db0606')
-                .setDescription('You do not have permission to use that command!');
-                
-            return message.channel.send(perm_msg);
-        }
+        if (roleCheck(message) == false)
+            return;
+            
         // Send original Reaction Role message
-        else if (args[0] == 'msg')
-        {
-            const statEmbed3 = new Discord.MessageEmbed()
+        else if (args[0] == 'msg') {
+            const STAT_EMBED_3 = new Discord.MessageEmbed()
                 .setTitle('Roles')
                 .setColor('db0606')
                 .setDescription(`🎮 <@&650032941363232851>
@@ -40,14 +32,13 @@ module.exports = {
                 :ninja: <@&797528459529420852> 
                 :military_helmet: <@&798173563206500352>`)
                 .setFooter('Click icons below to add desired role.')
-            message.channel.send(statEmbed3);
+            message.channel.send(STAT_EMBED_3);
         }
         // Edit original Reaction Role message
-        else if (args[0] == 'edit' && !isNaN(args[1]) && !isNaN(args[2]))
-        {
+        else if (args[0] == 'edit' && !isNaN(args[1]) && !isNaN(args[2])) {
             client.channels.cache.get(args[1]).messages.fetch(args[2])
             .then(msg => {
-                const editEmbed = new Discord.MessageEmbed()
+                const EDIT_EMBED = new Discord.MessageEmbed()
                 .setTitle('Roles')
                 .setColor('db0606')
                 .setDescription(`🎮 <@&650032941363232851>
@@ -68,10 +59,29 @@ module.exports = {
                 :ninja: <@&797528459529420852> 
                 :military_helmet: <@&798173563206500352>`)
                 .setFooter('Click icons below to add desired role.')
-            msg.edit(editEmbed)
+
+            msg.edit(EDIT_EMBED)
             })
             .catch(message.reply('an error occurred! Error: \n' + error))
         }
-        else message.reply('args are either "msg", "edit" or ...DEBUG');
+        else
+            message.reply('args are either "msg", "edit" or ...DEBUG');
+    }
+}
+
+function roleCheck(message) {
+    if (message.member.hasPermission('ADMINISTRATOR'))
+        return true;
+    else {
+        console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+    
+        MISSING_PERMS_EMBED = new Discord.MessageEmbed()
+            .setTitle('Error!')
+            .setColor('db0606')
+            .setDescription('You do not have permission to use that command!');
+    
+        message.channel.send(MISSING_PERMS_EMBED);
+
+        return false;
     }
 }

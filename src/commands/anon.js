@@ -1,13 +1,15 @@
 const Discord = require('discord.js')
 
-// i know this command is a mess, it was made in a hurry, i cba cleaning it
+// Here be dragons...
+// This both looks and IS much more complicated than it could (and frankly should) be, but it was written in a hurry
+// Will clean/fix at a later date (read: never)
 
 module.exports = {
     name: 'anon',
     decription: 'This command sends an anonymous message to Marshall#0002. This command must be sent in a DM to the bot.',
     type: 'dm',
     args: true,
-    usage: "anon info \nanon vote <NAME> \nanon praise <NAME> [MESSAGE] \nanon complaint <NAME> [MESSAGE] \nanon undo",
+    usage: 'anon info \nanon vote <NAME> \nanon praise <NAME> [MESSAGE] \nanon complaint <NAME> [MESSAGE] \nanon undo',
     
     async run (client, message, args) {
         // Length of the word "anon " thats in the message. Used to calculate the abstract message parts of the different commands.
@@ -15,10 +17,8 @@ module.exports = {
         anonMessage = args
         anonArgsLowCap = args[0].toLowerCase();
 
-        if (anonArgsLowCap == "vote" || anonArgsLowCap == "praise" || anonArgsLowCap == "complaint" || anonArgsLowCap == "undo" || anonArgsLowCap == "info")
-        {
-            if (anonArgsLowCap == "vote" && args[1] !== '' && args[1] !== ' ' && args[1] !== undefined)
-            {
+        if (anonArgsLowCap == "vote" || anonArgsLowCap == "praise" || anonArgsLowCap == "complaint" || anonArgsLowCap == "undo" || anonArgsLowCap == "info") {
+            if (anonArgsLowCap == "vote" && args[1] !== '' && args[1] !== ' ' && args[1] !== undefined) {
                     anonVoteAuthor = message.author.username;
                     anonVoteMessage = message.content.slice(1).substr(COMMANDLEN + args[0].length)
 
@@ -31,8 +31,7 @@ module.exports = {
                         .setTimestamp()        
                     client.users.cache.get('257866388557922314').send(anonVoteDM);
             }
-            else if (anonArgsLowCap == "complaint" && args[1] !== '' && args[1] !== ' ' && args[1] !== undefined)
-            {
+            else if (anonArgsLowCap == "complaint" && args[1] !== '' && args[1] !== ' ' && args[1] !== undefined) {
                 anonComplaintAuthor = message.author.username;
                 anonComplaintInstigator = args[1];
                 anonComplaintMessage = message.content.slice(1).substr(COMMANDLEN + args[0].length + args[1].length + 1);
@@ -46,8 +45,7 @@ module.exports = {
                     .setTimestamp()        
                 client.users.cache.get('257866388557922314').send(anonComplaintDM);
             }
-            else if (anonArgsLowCap == "praise" && args[1] !== '' && args[1] !== ' ' && args[1] !== undefined)
-            {
+            else if (anonArgsLowCap == "praise" && args[1] !== '' && args[1] !== ' ' && args[1] !== undefined) {
                 anonPraiseAuthor = message.author.username;
                 anonPraiseInstigator = args[1];
                 anonPraiseMessage = message.content.slice(1).substr(COMMANDLEN + args[0].length + args[1].length + 1);
@@ -61,8 +59,7 @@ module.exports = {
                     .setTimestamp()        
                 client.users.cache.get('257866388557922314').send(anonPraiseDM);
             }
-            else if (anonArgsLowCap == "undo")
-            {
+            else if (anonArgsLowCap == "undo") {
                 message.author.send("Your last action was undone.")
                 const anonUndoMsg = new Discord.MessageEmbed()
                     .setTitle("UNDO")
@@ -71,8 +68,7 @@ module.exports = {
                     .setTimestamp()        
                 client.users.cache.get('257866388557922314').send(anonUndoMsg);
             }
-            else if (anonArgsLowCap == "info")
-            {
+            else if (anonArgsLowCap == "info") {
                 const anonInfoMsg = new Discord.MessageEmbed()
                 .setTitle("The Anonymous command")
                 .setColor('0xffffff')
@@ -90,13 +86,9 @@ module.exports = {
                 message.author.send(anonInfoMsg);
             }
             else
-            {
                 message.author.send("Error! Incorrect format! For a more detailed explanation and examples, do **" + process.env.PREFIX + "anon info**");
-            }
         }
         else
-        {
             message.author.send("Error! That is not a valid command! The valid commands are:\n" + process.env.PREFIX + "**anon vote** \n" + process.env.PREFIX + "**anon praise** \n" + process.env.PREFIX + "**anon complaint** \n" + process.env.PREFIX + "**anon undo** \n" + process.env.PREFIX + "**anon info**\n\nFor a more detailed explanation and examples, do **" + process.env.PREFIX + "anon info**")
-        }
     }
 }

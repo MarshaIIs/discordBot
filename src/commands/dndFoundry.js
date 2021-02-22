@@ -1,27 +1,25 @@
-const Discord = require('discord.js')
+const Discord = require('discord.js');
+
+// Would very much like to clean this up, should take 10 min max
 
 module.exports = {
-    name: 'dndkey',
-    decription: 'This command lists all D\&D compendium abbreviations and their corresponding books.',
-    type: ['dnd'],
-    usage: "dndkey",
+    name: 'foundry',
+    decription: 'This command replies with a link to the Foundry D\&D lobby.',
+    type: 'dnd',
+    usage: "foundry",
     
     async run (client, message, args) {
-        if (dndChannelCheck(message) === false)
-            return;
-        if (dndRoleCheck(message) == false) 
-            return;
+        if (dndChannelCheck(message) == false)
+		    return;
+        if (dndRoleCheck(message) == false)
+		    return;
 
-        const DND_KEY_EMBED = new Discord.MessageEmbed()
-            .setTitle('DnD Source compendium key')
-            .setDescription('Each race, class, subrace, and subclass has a source abbreviation listed. This is a key to figure out which abbreviation belongs to which source.')
-            .setColor('7be6ee')
-            .addFields({ name: "Abbreviation", value: "AcInc\nDMG\nEGtW\nERLW\nEEPC\nGGtR\nID\:RotF\nLR\nMM\nMOoT\nMToF\nOGA\nPHB\nSCAG\nTCoE\nTP\nVGtM\nWGtE\nXGtE\n",
-                inline: true })
-            .addFields({ name: "Source", value: "Acquistions Incorporated\n Dungeon Master's Guide\n Explorer's Guide to Wildemount\n Eberron: Rising From The Last War\n Elemental Evil Player's Companion\n Guildmasters' Guide to Ravnica\n Icewind Dale: Rime of the Frostmaiden\n Locathah Rising\n Monster Manual\n Mystic Odysseys of Theros\n Mordenkainen's Tome of Foes\n One Grung Above\n Players Handbook\n Sword Coast Adventurer's Guide\n Tasha's Cauldron of Everything\n Tortle Package\n Volo's Guide to Monsters\n Wayfarer's Guide to Eberron\n Xanathar's Guide to Everything\n",
-                inline: true })
-
-        message.channel.send(DND_KEY_EMBED);
+        const FOUNDRY_EMBED = new Discord.MessageEmbed()
+        .setTitle('horsesmith.eu.forge-vtt.com')
+        .setURL('https://horsesmith.eu.forge-vtt.com/')
+        .setColor('7be6ee');
+        
+        message.channel.send(FOUNDRY_EMBED);
     }
 }
 

@@ -7,17 +7,19 @@ module.exports = {
     usage: 'ping',
     
     async run (client, message, args) {
-        if(channelCheck(message) == false) return;
+        if(channelCheck(message) == false)
+            return;
 
         console.log('timestamp: ' + message.createdTimestamp);
         console.log('date: ' + Date.now());
-        pingGenerated = Math.abs(message.createdTimestamp - Date.now())
 
-        const ping = new Discord.MessageEmbed()
+        let generatedPing = Math.abs(message.createdTimestamp - Date.now())
+
+        const PING_EMBED = new Discord.MessageEmbed()
             .setTitle('Pong! 🏓')
             .setColor('f04747')
-            .setDescription(`\`${pingGenerated}\` ms`);
-        message.channel.send(ping);
+            .setDescription(`\`${generatedPing}\` ms`);
+        message.channel.send(PING_EMBED);
     }
 }
 
@@ -28,18 +30,13 @@ function channelCheck(message) {
      */
 
     if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
-    {
-        // Return true if message is sent in one of the listed channels. 
         return true;
-    }
-    else
-    {
+    else {
         message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
             msg.delete({ timeout: 30000 })
         })
         .catch(console.error);
         
-        // Return false if channel is not one of the listed channels
         return false;
     }
 }

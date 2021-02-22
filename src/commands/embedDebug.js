@@ -6,21 +6,12 @@ module.exports = {
     type: 'debug',
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR')) 
-        {
-            console.log(`${message.author.tag}` + ' is missing permissions to perform \"' + this.name + '\" command');
-            perm_msg = new Discord.MessageEmbed()
-                .setTitle('Error!')
-                .setColor('db0606')
-                .setDescription('You do not have permission to use that command!');
-                
-            return message.channel.send(perm_msg);
-        }
+        if (roleCheck(message) == false)
+            return;
 
         // DND Explanation
-        if (args[0] == '1')
-        {
-            const statEmbed1 = new Discord.MessageEmbed()
+        if (args[0] == '1') {
+            const DND_EMBED_1 = new Discord.MessageEmbed()
                 .setTitle("Dungeoneers")
                 .setColor('7be6ee')
                 .setDescription('This is the Dungeons & Dragons category where all matters related to D&D is discussed.')
@@ -30,10 +21,10 @@ module.exports = {
                     .addFields({ name: "Description",
                     value: "This is the D&D general chat. Post anything here\nThis is a calender where sessions are shown.\nThis channel is only for DM's.",
                     inline: true })
-            message.channel.send(statEmbed1)
+            message.channel.send(DND_EMBED_1)
 
             .then(() => {
-            const statEmbed2 = new Discord.MessageEmbed()
+            const DND_EMBED_2 = new Discord.MessageEmbed()
                 .setColor('7be6ee')
                 .addFields({ name: "Roles",
                     value: "<@&753246465547305122>\n<@&680067187423051802>\n<@&753243379919355935>",
@@ -41,11 +32,11 @@ module.exports = {
                 .addFields({ name: "Description", 
                     value: "Part-timers play every now and again.\nDungeoneers play very frequently.\nDungeon Masters are the people hosting the games.", 
                     inline: true })
-            message.channel.send(statEmbed2);
+            message.channel.send(DND_EMBED_2);
             })
 
             .then(() => {
-            const statEmbed3 = new Discord.MessageEmbed()
+            const DND_EMBED_3 = new Discord.MessageEmbed()
                 .setTitle('Modules')
                 .setColor('7be6ee')
                 .setDescription('A **oneshot** is a quest that lasts around 1-2 sessions (8 ish hours) and the plot revolves around a single task (like clearing a dungeon).\nAn **adventure** is longer and lasts around 1-10 sessions. The plot can be more complicated, but its usually also one single quest\nA **campaign** can lasts several months or years and spans many characters, plot developments and more. These require serious commitment.\nWhen referring to all of them we call them **modules**.\n\nEach module is attached to a role. This is done to allow the DM to tag all their players when a new session is planned or when they have something to show them.')
@@ -55,15 +46,14 @@ module.exports = {
                 .addFields({ name: "Description", 
                     value: "Campaign\nOneshot\nAdventure\nCampaign", 
                     inline: true })
-            message.channel.send(statEmbed3);
+            message.channel.send(DND_EMBED_3);
 
             message.delete();
             })
         }
         // Testing Reaction Roles
-        else if (args[0] == '2')
-        {
-            const statEmbed3 = new Discord.MessageEmbed()
+        else if (args[0] == '2') {
+            const REACT_EMBED = new Discord.MessageEmbed()
             .setTitle('Games')
             .setColor('db0606')
             .setDescription(`:video_game: @Gamers
@@ -78,16 +68,15 @@ module.exports = {
             :meat_on_bone: @Don\'t Starve
             :japanese_ogre: @Monster Hunter`)
             .setFooter('Click icons below to add desired role.')
-        message.channel.send(statEmbed3);
+        message.channel.send(REACT_EMBED);
         }
-        else if (args[0] == '3' && !isNaN(args[1]) && !isNaN(args[2]))
-        {
+        else if (args[0] == '3' && !isNaN(args[1]) && !isNaN(args[2])) {
             // const channel = client.channels.cache.get("762301953995702322");
             // const msg = channel.messages.cache.get('798668136907931659');
             try {
                 client.channels.cache.get(args[1]).messages.fetch(args[2])
                 .then(msg => {
-                    const editEmbed = new Discord.MessageEmbed()
+                    const REACT_EDIT_EMBED = new Discord.MessageEmbed()
                     .setTitle('Games')
                     .setColor('db0606')
                     .setDescription(`:video_game: @BOB
@@ -103,14 +92,31 @@ module.exports = {
                     :japanese_ogre: @Monster Hunter`)
                     .setFooter('Click icons below to add desired role.')
 
-                    msg.edit(editEmbed)
+                    msg.edit(REACT_EDIT_EMBED)
                 })
             }
-            catch (error)
-            {
+            catch (error) {
                 message.reply('an error occurred! \nPlease verify the Channel ID and the Message ID')
             }
         }
-        else message.reply("use args 1, 2 or 3");
+        else 
+            message.reply("use args 1, 2 or 3");
+    }
+}
+
+function roleCheck(message) {
+    if (message.member.hasPermission('ADMINISTRATOR'))
+        return true;
+    else {
+        console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+    
+        MISSING_PERMS_EMBED = new Discord.MessageEmbed()
+            .setTitle('Error!')
+            .setColor('db0606')
+            .setDescription('You do not have permission to use that command!');
+    
+        message.channel.send(MISSING_PERMS_EMBED);
+
+        return false;
     }
 }

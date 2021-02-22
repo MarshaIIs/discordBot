@@ -1,5 +1,8 @@
 const Discord = require('discord.js')
-const pongSent = new Set();
+const PONG_MSG_SET = new Set();
+
+// im aware its aids, also aware than its very very wrong
+// to do, implement promises with each message, callbacks, .then chains
 
 module.exports = {
     name: 'pong',
@@ -8,44 +11,46 @@ module.exports = {
     usage: "pong",
     
     async run (client, message, args) {
-        if(channelCheck(message) == false) return;
+        if (channelCheck(message) == false) 
+            return;
 
-        if (pongSent.has(message.author.id)) 
-        {
+        if (PONG_MSG_SET.has(message.author.id)) {
             message.reply("cool off bud.").then(msg => {
                 msg.delete({ timeout: 15000 })
             })
             .catch(console.error);
         } 
-        else 
-        {
+        else {
             // Adds the user to the set so that they can't talk for a bit
             let muteRole = message.guild.roles.cache.find(role => role.name === 'Muted');
+
             message.member.roles.add(muteRole)
-            pongSent.add(message.author.id);
+            PONG_MSG_SET.add(message.author.id);
 
             // Removes the user from the set after X amount of time
             setTimeout(() => {
-                pongSent.delete(message.author.id);
+                PONG_MSG_SET.delete(message.author.id);
                 message.member.roles.remove(muteRole)
             }, 120000);
 
             // The messages BEGIN! 
             // Message 1:
-            const pong = new Discord.MessageEmbed()
+            const PONG_EMBED_1 = new Discord.MessageEmbed()
             .setTitle('Did you mean **' + process.env.PREFIX + 'ping**, you fucking idiot?')
             .setColor('f04747')
-            message.channel.send(pong).then(msg => {
+
+            message.channel.send(PONG_EMBED_1).then(msg => {
                 msg.delete({ timeout: 120000 })
             })
             .catch(console.error);
 
             // Message 2:
             setTimeout(function() {
-                const pong2 = new Discord.MessageEmbed()
+                const PONG_EMBED_2 = new Discord.MessageEmbed()
                 .setTitle('Bet you think you\'re a real smart guy, eh?')
                 .setColor('f04747')
-                message.channel.send(pong2).then(msg => {
+
+                message.channel.send(PONG_EMBED_2).then(msg => {
                     msg.delete({ timeout: 115000 })
                 })
                 .catch(console.error);
@@ -53,10 +58,11 @@ module.exports = {
 
             // Message 3:
             setTimeout(function() {
-                const pong2 = new Discord.MessageEmbed()
+                const PONG_EMBED_3 = new Discord.MessageEmbed()
                 .setDescription('Well you\'re fucking not.')
                 .setColor('f04747')
-                message.channel.send(pong2).then(msg => {
+
+                message.channel.send(PONG_EMBED_3).then(msg => {
                     msg.delete({ timeout: 110000 })
                 })
                 .catch(console.error);
@@ -64,10 +70,11 @@ module.exports = {
 
             // Message 4:
             setTimeout(function() {
-                const pong2 = new Discord.MessageEmbed()
+                const PONG_EMBED_4 = new Discord.MessageEmbed()
                 .setFooter('fucking bitch...')
                 .setColor('f04747')
-                message.channel.send(pong2).then(msg => {
+
+                message.channel.send(PONG_EMBED_4).then(msg => {
                     msg.delete({ timeout: 105000 })
                 })
                 .catch(console.error);
@@ -82,8 +89,7 @@ function channelCheck(message) {
      * 634050395336998933 = #cmd-testing
      */
 
-    if(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933') {
-        // Return true if message is sent in one of the listed channels. 
+    if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933') {
         return true;
     }
     else {
@@ -92,7 +98,6 @@ function channelCheck(message) {
         })
         .catch(console.error);
         
-        // Return false if channel is not one of the listed channels
         return false;
     }
 }

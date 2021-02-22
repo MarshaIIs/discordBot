@@ -1,5 +1,4 @@
-var fs = require("fs");
-const { strats } = require("../database/strats/strats.json")
+const { strats: STRATS_JSON } = require("../database/strats/strats.json")
 const Discord = require('discord.js')
 
 module.exports = {
@@ -9,42 +8,41 @@ module.exports = {
     usage: 'strat <TEAM>',
     
     async run (client, message, args) {
-        if(channelCheck(message) == false) return;
+        if (channelCheck(message) == false) 
+            return;
+        if (args.length === 0) 
+            return message.reply(`${args} is not a valid team! The proper usage is ${process.env.PREFIX}random <team>.`);
 
-        if (args.length === 0) return message.reply(args + ' is not a valid team! The proper usage is ' + process.env.PREFIX + 'random <team>.');
-        console.log(args);
-        const RAND = Math.floor(Math.random() * strats.def.length);
+        const RAND_NUM = Math.floor(Math.random() * STRATS_JSON.def.length);
 
-        if (args[0][0] == 'd') 
-        {
-            chosenStrat = strats.def[RAND];
-            console.log('Array Length: ' + strats.def.length);
-            console.log('Random Number: ' + RAND);
+        if (args[0][0] == 'd') {
+            chosenStrat = STRATS_JSON.def[RAND_NUM];
+            console.log('Array Length: ' + STRATS_JSON.def.length);
+            console.log('Random Number: ' + RAND_NUM);
             console.log('Strat: ' + chosenStrat.title + ':\n' + chosenStrat.body);
 
-            const def_msg = new Discord.MessageEmbed()
+            const DEF_EMBED = new Discord.MessageEmbed()
             //.setTitle('Defender strat:')
             .setColor('1B6BFF')
             .addField(`${chosenStrat.title}`, `${chosenStrat.body}`);
-            message.channel.send(def_msg);
+
+            message.channel.send(DEF_EMBED);
         }
-        else if (args[0][0] == 'a') 
-        {
-            chosenStrat = strats.atk[RAND];
-            console.log('Array Length: ' + strats.atk.length);
-            console.log('Random Number: ' + RAND);
+        else if (args[0][0] == 'a') {
+            chosenStrat = STRATS_JSON.atk[RAND_NUM];
+            console.log('Array Length: ' + STRATS_JSON.atk.length);
+            console.log('Random Number: ' + RAND_NUM);
             console.log('Strat: ' + chosenStrat.title + ':\n' + chosenStrat.body);
 
-            const atk_msg = new Discord.MessageEmbed()
+            const ATK_EMBED = new Discord.MessageEmbed()
             //.setTitle('Attacker strat:')
             .setColor('FF831B')
             .addField(`${chosenStrat.title}`, `${chosenStrat.body}`);
-            message.channel.send(atk_msg);
+
+            message.channel.send(ATK_EMBED);
         }
         else 
-        {
-            message.reply(args + ' is not a valid team! The proper usage is ' + process.env.PREFIX + 'random <team>.')
-        }
+            message.reply(`${args} is not a valid team! The proper usage is ${process.env.PREFIX}random <team>.`);
     }
 }
 
@@ -54,19 +52,14 @@ function channelCheck(message) {
      * 634050395336998933 = #cmd-testing
      */
 
-    if(message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
-    {
-        // Return true if message is sent in one of the listed channels. 
+    if (message.channel == '687306978443132958' || message.channel == '624299862464135170' || message.channel == '634050395336998933')
         return true;
-    }
-    else
-    {
+    else {
         message.reply('please use a correct channel, such as <#687306978443132958>').then(msg => {
             msg.delete({ timeout: 30000 })
         })
         .catch(console.error);
         
-        // Return false if channel is not one of the listed channels
         return false;
     }
 }

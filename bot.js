@@ -1,15 +1,15 @@
 require("dotenv").config();
 const Discord = require('discord.js');
 const client = new Discord.Client({ partials: ['MESSAGE', 'REACTION'] });
-const fs = require('fs');
-const talkedRecently = new Set();
+const Fs = require('fs');
+const TALKED_RECENTLY = new Set();
 
 client.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./src/commands/').filter(file => file.endsWith('.js'));
+const COMMAND_FILES = Fs.readdirSync('./src/commands/').filter(file => file.endsWith('.js'));
 
-for(const file of commandFiles) {
-    const command = require(`./src/commands/${file}`);
-    client.commands.set(command.name, command);
+for (const file of COMMAND_FILES) {
+    const COMMAND = require(`./src/commands/${file}`);
+    client.commands.set(COMMAND.name, COMMAND);
 };
 
 client.on('ready', () => {
@@ -31,32 +31,28 @@ client.on('message', async (message) => {
     .substring(process.env.PREFIX.length)
     .split(/\s+/);
 
-    //If the bot is ever mentioned, it will respond with a list of commands.
-    // if (message.mentions.has(client.user)) {
-    //     message.reply("here is a list of commands!");
-    //     client.commands.get("help").run(client, message);
-    // };
+    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot)
+        return;
+    if (message.channel.type === 'dm' && command !== "anon")
+        return;
+    if (!client.commands.has(command))
+        return;
 
-    if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
-    if (message.channel.type === 'dm' && command !== "anon") return;
-    if (!client.commands.has(command)) return;
-
-    if (talkedRecently.has(message.author.id)) {
+    if (TALKED_RECENTLY.has(message.author.id)) {
         message.reply("you are sending too many requests! Please wait a moment.")
             .then(msg => {
                 msg.delete({ timeout: 3000 })
             })
             .catch(console.error);
-        }
-        
+    }
     else {
-        talkedRecently.add(message.author.id); // Adds the user to the set so that they can't talk for a bit
+        TALKED_RECENTLY.add(message.author.id); // Adds the user to the set so that they can't talk for a bit
 
         setTimeout(() => {
-        talkedRecently.delete(message.author.id); // Removes the user from the set after a minute
+        TALKED_RECENTLY.delete(message.author.id); // Removes the user from the set after a minute
         }, 3000);
 
-        console.log("Running command: " + command);
+        console.log(`Running command: ${command}`);
         try {
             client.commands.get(command).run(client, message, args);
         } 
@@ -66,4 +62,4 @@ client.on('message', async (message) => {
     }
 });
 
-client.login(process.env.DISCORDJS_BOT_TOKEN);
+client.login(process.env.DISCORD_BOT_TOKEN);
