@@ -38,6 +38,7 @@ module.exports = {
         }
         // Edit original Reaction Role message
         else if (args[0] == 'edit' && !isNaN(args[1]) && !isNaN(args[2])) {
+            // args[1] = Channel, args[2] = Message. Both channel and message is needed when editing by ID
             client.channels.cache.get(args[1]).messages.fetch(args[2])
             .then(msg => {
                 const EDIT_EMBED = new Discord.MessageEmbed()

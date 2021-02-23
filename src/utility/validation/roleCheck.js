@@ -6,13 +6,18 @@ class RoleCheck {
             return true;
         else {
             console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
                 .setTitle('Error!')
                 .setColor('db0606')
                 .setDescription('You do not have permission to use that command!');
         
-            message.channel.send(MISSING_PERMS_EMBED);
+            message.channel.send(MISSING_PERMS_EMBED)
+            .then(msg => {
+                msg.delete({ timeout: 10000 })
+            })
+            .catch(console.error);
     
             return false;
         }
@@ -24,13 +29,18 @@ class RoleCheck {
             return true;
         else {
             console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
                 .setTitle('Error!')
                 .setColor('db0606')
                 .setDescription('You do not have permission to use that command!');
         
-            message.channel.send(MISSING_PERMS_EMBED);
+            message.channel.send(MISSING_PERMS_EMBED)
+            .then(msg => {
+                msg.delete({ timeout: 10000 })
+            })
+            .catch(console.error);
     
             return false;
         }
@@ -42,13 +52,18 @@ class RoleCheck {
             return true;
         else {
             console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
                 .setTitle('Error!')
                 .setColor('db0606')
                 .setDescription('You do not have permission to use that command!');
         
-            message.channel.send(MISSING_PERMS_EMBED);
+            message.channel.send(MISSING_PERMS_EMBED)
+            .then(msg => {
+                msg.delete({ timeout: 10000 })
+            })
+            .catch(console.error);
     
             return false;
         }
@@ -60,13 +75,18 @@ class RoleCheck {
             return true;
         else {
             console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
                 .setTitle('Error!')
                 .setColor('db0606')
                 .setDescription('You do not have permission to use that command!');
         
-            message.channel.send(MISSING_PERMS_EMBED);
+            message.channel.send(MISSING_PERMS_EMBED)
+            .then(msg => {
+                msg.delete({ timeout: 10000 })
+            })
+            .catch(console.error);
     
             return false;
         }
@@ -77,13 +97,18 @@ class RoleCheck {
             return true;
         else {
             console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
                 .setTitle('Error!')
                 .setColor('db0606')
                 .setDescription('You do not have permission to use that command!');
         
-            message.channel.send(MISSING_PERMS_EMBED);
+            message.channel.send(MISSING_PERMS_EMBED)
+            .then(msg => {
+                msg.delete({ timeout: 10000 })
+            })
+            .catch(console.error);
     
             return false;
         }

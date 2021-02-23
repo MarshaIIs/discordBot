@@ -16,8 +16,14 @@ module.exports = {
         //     return;
 
         // Check if a user is mentioned or if the user mentioned is the bot itself.
-        if (!message.mentions.members.first() || message.mentions.has(client.user)) 
-            return message.reply('the proper usage is ' + process.env.PREFIX + 'poke <USER MENTION>');
+        if (!message.mentions.members.first() || message.mentions.has(client.user)) {
+            message.reply('the proper usage is ' + process.env.PREFIX + 'poke <USER MENTION>')
+                .then(msg => {
+                    msg.delete({ timeout: 5000 })
+                })
+                .catch(console.error);
+            return;
+        }
         else {
             let authorUser = message.author.id;
             let pokedUser  = message.mentions.users.first().id;
@@ -26,9 +32,15 @@ module.exports = {
             if (args[1] !== undefined) 
                 gifTag = gifTagCheck(args);
 
-            voiceChannelCheck (message);
+            voiceChannelCheck (message, pokedUser);
 
+            
             message.reply(message.mentions.users.first().username + ' has been poked!')
+            .then(msg => {
+                message.delete();
+                msg.delete({ timeout: 5000 })
+            })
+            .catch(console.error);
             
             // Gif/Giphy code, see gifGenerator()
             generateGif(gifTag)
@@ -47,6 +59,7 @@ module.exports = {
                     .setImage(lateGifFinal)
                     .setTimestamp()
                     //.setFooter("Powered By GIPHY")
+
                 message.guild.members.cache.get(pokedUser).send(POKE_EMBED);
             })
             .catch(error => {
@@ -69,7 +82,7 @@ function gifTagCheck(arguments) {
 }
 
 // If the message author is already in a voice channel, provide the pokedUser with a link to said voice channel
-async function voiceChannelCheck (msg) {
+async function voiceChannelCheck (msg, pokedUser) {
     if (msg.member.voice.channel != undefined || msg.member.voice.channel != null) {
         let inviteMsg = await msg.member.voice.channel.createInvite(
             {
