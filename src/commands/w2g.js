@@ -10,7 +10,7 @@ module.exports = {
     usage: 'w2g [LINK]',
  
     async run (client, message, args) {
-        if (CheckChannel.default(message) == false)
+        if (CheckChannel.default(message) === false)
             return;
 
         console.log(args[0])
@@ -35,7 +35,8 @@ module.exports = {
                 // The request was made but no response was received
                 console.log(error.request);
                 message.channel.send("I asked the server for a W2G room but received no response...")
-                } else {
+            }
+            else {
                 // Something happened in setting up the request that triggered an Error
                 console.log('Error: ', error.message);
                 message.channel.send("An unknown error occured!")

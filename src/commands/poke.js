@@ -83,7 +83,7 @@ function gifTagCheck(arguments) {
 
 // If the message author is already in a voice channel, provide the pokedUser with a link to said voice channel
 async function voiceChannelCheck (msg, pokedUser) {
-    if (msg.member.voice.channel != undefined || msg.member.voice.channel != null) {
+    if (msg.member.voice.channel !== undefined || msg.member.voice.channel !== null) {
         let inviteMsg = await msg.member.voice.channel.createInvite(
             {
                 maxAge: 3600, // maximum time for the invite, in milliseconds

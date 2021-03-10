@@ -8,7 +8,7 @@ module.exports = {
     usage: 'clear <NUMBER>',
     
     async run (client, message, args) {
-        if (RoleCheck.clear(message) == false) 
+        if (RoleCheck.clear(message) === false) 
             return;
 
         let amount = args.join(" ");

@@ -11,7 +11,7 @@ module.exports = {
     usage: 'poll',
     
     async run (client, message, args) {
-        if (RoleCheck.owner(message) == false)
+        if (RoleCheck.owner(message) === false)
             return;
 
         // const POLL_EMBED = new Discord.MessageEmbed()

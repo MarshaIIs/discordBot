@@ -38,26 +38,39 @@ client.on('message', async (message) => {
     if (!client.commands.has(command))
         return;
 
-    if (TALKED_RECENTLY.has(message.author.id)) {
-        message.reply("you are sending too many requests! Please wait a moment.")
-            .then(msg => {
-                msg.delete({ timeout: 3000 })
-            })
-            .catch(console.error);
-    }
-    else {
-        TALKED_RECENTLY.add(message.author.id); // Adds the user to the set so that they can't talk for a bit
+    if (message.member.hasPermission('ADMINISTRATOR')) {
+        console.log(`ADMIN ${message.author.tag} running command: ${command}`);
 
-        setTimeout(() => {
-        TALKED_RECENTLY.delete(message.author.id); // Removes the user from the set after a minute
-        }, 3000);
-
-        console.log(`Running command: ${command}`);
         try {
             client.commands.get(command).run(client, message, args);
         } 
         catch (error) {
             console.error(error);
+        }
+    }
+    else {
+        if (TALKED_RECENTLY.has(message.author.id)) {
+            message.reply("you are sending too many requests! Please wait a moment.")
+                .then(msg => {
+                    msg.delete({ timeout: 3000 })
+                })
+                .catch(console.error);
+        }
+        else {
+            TALKED_RECENTLY.add(message.author.id); // Adds the user to the set so that they can't talk for a bit
+
+            setTimeout(() => {
+            TALKED_RECENTLY.delete(message.author.id); // Removes the user from the set after a minute
+            }, 3000);
+
+            console.log(`${message.author.tag} Running command: ${command}`);
+            
+            try {
+                client.commands.get(command).run(client, message, args);
+            } 
+            catch (error) {
+                console.error(error);
+            }
         }
     }
 });

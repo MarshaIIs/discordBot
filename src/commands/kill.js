@@ -8,7 +8,7 @@ module.exports = {
     usage: "kill",
     
     async run (client, message, args) {
-        if (RoleCheck.owner(message) == false)
+        if (RoleCheck.owner(message) === false)
             return;
 
         message.channel.send('Stopping bot...').then(() => {

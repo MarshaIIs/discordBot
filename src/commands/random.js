@@ -7,7 +7,7 @@ module.exports = {
 	//aliases: ['dice', 'rolldice', 'roll'],
 	
     async run (client, message, args) {
-        if (validateInput(args, message) == false)
+        if (validateInput(args, message) === false)
 			return;
         
         const RAND_INT = args.join(' ');
@@ -21,7 +21,7 @@ module.exports = {
 }
 
 function validateInput(args, message) {
-    if (args.length !== 0 || typeof(args) == "number")
+    if (args.length !== 0 || typeof(args) === "number")
         return true
     else {
         message.reply(`The proper usage is ${process.env.PREFIX}random <number>.`);

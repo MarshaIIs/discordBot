@@ -17,7 +17,7 @@ module.exports = {
     async run (client, message, args) {
         if (CheckChannel.default(message) === false)
             return;
-        if (RoleCheck.admin(message) == false) 
+        if (RoleCheck.admin(message) === false) 
             return;
 
         if (args[0] === "inputfile") {

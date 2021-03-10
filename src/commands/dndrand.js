@@ -12,9 +12,9 @@ module.exports = {
     usage: "dndrand [CLASS/RACE]",
     
     async run (client, message, args) {
-        if (CheckChannel.dnd(message) == false) 
+        if (CheckChannel.dnd(message) === false) 
             return;
-        if (RoleCheck.dnd(message) == false) 
+        if (RoleCheck.dnd(message) === false) 
             return;
 
         let dndArgs = args.map(v => v.toLowerCase());

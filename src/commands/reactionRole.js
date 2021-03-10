@@ -8,11 +8,11 @@ module.exports = {
     type: 'utility',
     
     async run (client, message, args) {
-        if (RoleCheck.owner(message) == false)
+        if (RoleCheck.owner(message) === false)
             return;
             
         // Send original Reaction Role message
-        else if (args[0] == 'msg') {
+        else if (args[0] === 'msg') {
             const STAT_EMBED_3 = new Discord.MessageEmbed()
                 .setTitle('Roles')
                 .setColor('db0606')
@@ -37,7 +37,7 @@ module.exports = {
             message.channel.send(STAT_EMBED_3);
         }
         // Edit original Reaction Role message
-        else if (args[0] == 'edit' && !isNaN(args[1]) && !isNaN(args[2])) {
+        else if (args[0] === 'edit' && !isNaN(args[1]) && !isNaN(args[2])) {
             // args[1] = Channel, args[2] = Message. Both channel and message is needed when editing by ID
             client.channels.cache.get(args[1]).messages.fetch(args[2])
             .then(msg => {

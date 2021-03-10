@@ -1,0 +1,24 @@
+{
+    "revolt": [
+        {
+            "msg": "i refuse"
+        },
+        {
+            "msg": "no >:("
+        },
+        {
+            "msg": "*yawn* i'll do it later"
+        },
+        {
+            "msg": "an error has occurred: \nUser gayness exceeds allowed limits."
+        },
+        {
+            "msg": "NO!",
+            "files": ["./src/files/audio/no.mp3"]
+        },
+        {
+            "msg": "loading...",
+            "files": ["./src/files/audio/loading.mp3"]
+        }
+    ]
+}
