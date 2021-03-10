@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const MARSHALL = '257866388557922314'
 
 class RoleCheck {
     admin(message) {
@@ -25,7 +26,7 @@ class RoleCheck {
 
     owner(message) {
         // 257866388557922314 = Marshall
-        if (message.author.id == '257866388557922314')
+        if (message.author.id === MARSHALL)
             return true;
         else {
             console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
