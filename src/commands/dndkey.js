@@ -11,9 +11,9 @@ module.exports = {
     usage: "dndkey",
     
     async run (client, message, args) {
-        if (CheckChannel.dnd(message) === false)
+        if (CheckChannel.dnd(message, this.name) === false)
             return;
-        if (RoleCheck.dnd(message) == false) 
+        if (RoleCheck.dnd(message, this.name) === false) 
             return;
 
         const DND_KEY_EMBED = new Discord.MessageEmbed()

@@ -13,7 +13,7 @@ module.exports = {
     usage: "pong",
     
     async run (client, message, args) {
-        if (CheckChannel.default(message) === false) 
+        if (CheckChannel.default(message, this.name) === false) 
             return;
 
         if (PONG_MSG_SET.has(message.author.id)) {

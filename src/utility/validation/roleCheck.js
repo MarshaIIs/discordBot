@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 const MARSHALL = '257866388557922314'
 
 class RoleCheck {
-    admin(message) {
+    admin(message, cmdName) {
         if (message.member.hasPermission('ADMINISTRATOR'))
             return true;
         else {
-            console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            console.log(`ERROR Missing Permissions: ${message.author.tag} cannot run ${cmdName} in ${message.channel.name}.`);
             message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
@@ -24,12 +24,12 @@ class RoleCheck {
         }
     }
 
-    owner(message) {
+    owner(message, cmdName) {
         // 257866388557922314 = Marshall
-        if (message.author.id === MARSHALL)
+        if (message.author.id == MARSHALL)
             return true;
         else {
-            console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            console.log(`ERROR Missing Permissions: ${message.author.tag} cannot run ${cmdName} in ${message.channel.name}.`);
             message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
@@ -47,12 +47,12 @@ class RoleCheck {
         }
     }
 
-    dnd(message) {
-        if (message.member.roles.cache.some(role => role.name === 'D&D Part-Timer') || message.member.roles.cache.some(role => role.name === 'Dungeoneer') || 
-        message.member.roles.cache.some(role => role.name === 'Dungeon Master') || message.member.hasPermission('ADMINISTRATOR'))
+    dnd(message, cmdName) {
+        if (message.member.roles.cache.some(role => role.name == 'D&D Part-Timer') || message.member.roles.cache.some(role => role.name == 'Dungeoneer') || 
+        message.member.roles.cache.some(role => role.name == 'Dungeon Master') || message.member.hasPermission('ADMINISTRATOR'))
             return true;
         else {
-            console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            console.log(`ERROR Missing Permissions: ${message.author.tag} cannot run ${cmdName} in ${message.channel.name}.`);
             message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
@@ -70,12 +70,12 @@ class RoleCheck {
         }
     }
 
-    dndDM(message) {
-        if (message.member.roles.cache.some(role => role.name === 'D&D Part-Timer') || message.member.roles.cache.some(role => role.name === 'Dungeon Master') || 
-        message.member.roles.cache.some(role => role.name === 'Dungeon Master') || message.member.hasPermission('ADMINISTRATOR'))
+    dndDM(message, cmdName) {
+        if (message.member.roles.cache.some(role => role.name == 'D&D Part-Timer') || message.member.roles.cache.some(role => role.name == 'Dungeon Master') || 
+        message.member.roles.cache.some(role => role.name == 'Dungeon Master') || message.member.hasPermission('ADMINISTRATOR'))
             return true;
         else {
-            console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            console.log(`ERROR Missing Permissions: ${message.author.tag} cannot run ${cmdName} in ${message.channel.name}.`);
             message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()
@@ -93,11 +93,11 @@ class RoleCheck {
         }
     }
 
-    clear(message) {
-        if (message.member.hasPermission('ADMINISTRATOR') || message.member.roles.cache.some(role => role.name === 'Clear perms'))
+    clear(message, cmdName) {
+        if (message.member.hasPermission('ADMINISTRATOR') || message.member.roles.cache.some(role => role.name == 'Clear perms'))
             return true;
         else {
-            console.log(`${message.author.tag} is missing permissions to perform "${this.name}" command`);
+            console.log(`ERROR Missing Permissions: ${message.author.tag} cannot run ${cmdName} in ${message.channel.name}.`);
             message.delete()
         
             const MISSING_PERMS_EMBED = new Discord.MessageEmbed()

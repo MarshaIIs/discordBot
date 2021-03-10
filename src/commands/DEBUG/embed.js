@@ -1,33 +1,33 @@
 const Discord = require('discord.js');
+const Role = require('../utility/validation/roleCheck.js');
+const RoleCheck = new Role;
 
 module.exports = {
     name: 'embed',
     decription: 'Creates an embedded message.',
+    type: 'utility',
     
     async run (client, message, args) {
-        if (!message.member.hasPermission('ADMINISTRATOR')) {
-            console.log(`${message.author.tag}` + ' is missing permissions to perform embed command');
-            perm_msg = new Discord.MessageEmbed()
-                .setTitle('Error!')
-                .setColor('ff3333')
-                .setDescription('You do not have permission to use that command!');
+        if (RoleCheck.admin(message) === false)
+            return;
 
-            return message.channel.send(perm_msg);
-        }
-        console.log('Args: ' + args)
-
-        if(args == 'new') {
-            const embed = new Discord.MessageEmbed()
-            .setTitle("Should the prefix be ! or %")
-            .setColor('f04747')
-            .setFooter("Vote below by clicking the appropriate reaction.")
-            .addFields({ name: "Vote for ! with :blue_circle:",
-                value: "\u200b", inline: true})
-                .addFields({ name: "Vote for % with :orange_circle:",
-                value: "\u200b", inline: true})
+        let strArr = [];
         
-            message.channel.send(embed);
-        }
+
+        // `m` is a message object that will be passed through the filter function
+        const filter = m => m.content.includes('1') || m.content.includes('2');
+        const collector = message.channel.createMessageCollector(filter, { time: 30000 });
+
+        collector.on('collect', m => {
+            
+        });
+
+        collector.on('end', collected => {
+            console.log(`Collected ${collected.size} items`);
+        });
+
+
+        
     }
 }
 

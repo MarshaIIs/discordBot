@@ -17,9 +17,9 @@ module.exports = {
     usage: '<message>',
     
     async run (client, message, args) {
-        if (CheckChannel.default(message) === false)
+        if (CheckChannel.default(message, this.name) === false)
             return;
-        if (RoleCheck.admin(message) === false) 
+        if (RoleCheck.admin(message, this.name) === false) 
             return;
         
         if (args.length === 0)

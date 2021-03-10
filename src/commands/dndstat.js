@@ -21,9 +21,9 @@ module.exports = {
     usage: "dndstat <MIN>,<MAX>",
     
     async run (client, message, args) {
-        if (CheckChannel.dnd(message) === false) 
+        if (CheckChannel.dnd(message, this.name) === false) 
             return;
-        if (RoleCheck.dnd(message) === false)
+        if (RoleCheck.dnd(message, this.name) === false)
             return;
 
         else {

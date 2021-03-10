@@ -9,7 +9,7 @@ module.exports = {
     usage: 'ping',
     
     async run (client, message, args) {
-        if (CheckChannel.default(message) === false)
+        if (CheckChannel.default(message, this.name) === false)
             return;
 
         console.log('timestamp: ' + message.createdTimestamp);

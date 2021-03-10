@@ -8,7 +8,7 @@ module.exports = {
     type: 'debug',
     
     async run (client, message, args) {
-        if (RoleCheck.owner(message) == false)
+        if (RoleCheck.owner(message, this.name) === false)
             return;
 
         // DND Explanation

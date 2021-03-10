@@ -12,17 +12,17 @@ module.exports = {
     usage: "dndrand [CLASS/RACE]",
     
     async run (client, message, args) {
-        if (CheckChannel.dnd(message) === false) 
+        if (CheckChannel.dnd(message, this.name) === false) 
             return;
-        if (RoleCheck.dnd(message) === false) 
+        if (RoleCheck.dnd(message, this.name) === false) 
             return;
 
         let dndArgs = args.map(v => v.toLowerCase());
         
-        if (dndArgs[0] === 'class') {
+        if (dndArgs[0] == 'class') {
             let classChosen = dndArgs[1];
             
-            if (classChosen == undefined || classChosen == '' || classChosen == ' ' || DND_JSON.subclass[0][classChosen] == undefined)
+            if (classChosen == undefined || classChosen == ' ' || DND_JSON.subclass[0][classChosen] == undefined)
                 return message.reply(`that is not a proper class! \nThe proper usage is ${process.env.PREFIX}dndrand class <class>`);
             else {
                     classChosen      = classChosen.trim();
@@ -38,11 +38,11 @@ module.exports = {
             }
         }
 
-        else if (dndArgs[0] === 'race') {
+        else if (dndArgs[0] == 'race') {
             let raceChosen = dndArgs[1];
             console.log('raceChosen: ' + raceChosen);
 
-            if (raceChosen == undefined || raceChosen == '' || raceChosen == ' ' || DND_JSON.subrace[0][raceChosen] == undefined)
+            if (raceChosen == undefined || raceChosen == ' ' || DND_JSON.subrace[0][raceChosen] == undefined)
                 return message.reply(`that is not a proper race! \nThe proper usage is ${process.env.PREFIX}dndrand race <race>`);
             else {
                     raceChosen      = raceChosen.trim();

@@ -12,7 +12,7 @@ module.exports = {
     usage: "<MENTION>",
     
     async run (client, message, args) {
-        // if (CheckChannel.default(message) == false)
+        // if (CheckChannel.default(message, this.name) == false)
         //     return;
 
         // Check if a user is mentioned or if the user mentioned is the bot itself.

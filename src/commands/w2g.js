@@ -10,7 +10,7 @@ module.exports = {
     usage: 'w2g [LINK]',
  
     async run (client, message, args) {
-        if (CheckChannel.default(message) === false)
+        if (CheckChannel.default(message, this.name) === false)
             return;
 
         console.log(args[0])

@@ -10,7 +10,7 @@ module.exports = {
         let contentSay = message.content.split(" ").slice(1);
         let sayText    = contentSay.join(" ");
 
-        if (revolt(message, sayText) == false) {
+        if (revolt(message, sayText) === false) {
             return;
         }
         
@@ -24,9 +24,9 @@ module.exports = {
 function revolt(message) {
     // if ID = Rapidzz + AND not admin (change AND to OR to make it work on all but admins + rapidzz)
     if (message.author.id == '141233046648127488' && !message.member.hasPermission('ADMINISTRATOR')) {
-    //if (true) { //for debug
         const RAND_PCT = Math.floor(Math.random() * 100);
-        console.log(`RAND_PCT: ${RAND_PCT}`)
+        //console.log(`RAND_PCT: ${RAND_PCT}`)
+        console.log(`${message.author.tag} has caused a revolt in the ${this.name} command!`)
         
         if (RAND_PCT < 10) {
             let   fileElement = SAY_JSON.revolt;

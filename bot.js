@@ -13,7 +13,7 @@ for (const file of COMMAND_FILES) {
 };
 
 client.on('ready', () => {
-    console.log(`${client.user.tag} has logged in.`);
+    console.log(`\n${client.user.tag} has logged in.`);
     client.user.setPresence({
         status: 'dnd',  // online, idle, dnd
         activity: {

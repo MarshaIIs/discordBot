@@ -11,7 +11,7 @@ module.exports = {
     usage: 'poll',
     
     async run (client, message, args) {
-        if (RoleCheck.owner(message) === false)
+        if (RoleCheck.owner(message, this.name) === false)
             return;
 
         // const POLL_EMBED = new Discord.MessageEmbed()
@@ -47,15 +47,15 @@ module.exports = {
         collector.on('collect', m => {
             console.log(`Collected ${m.content}`);
 
-            if (m.content == '1') {
+            if (m.content === '1') {
                 vote1++
             }
-            if (m.content == '2') {
+            if (m.content === '2') {
                 vote2++
             }
 
-            symVote1 = '';
-            symVote2 = '';
+            symVote1  = '';
+            symVote2  = '';
             totalVote = vote1 + vote2
             vote1Per  = vote1 / totalVote * 100;
             vote2Per  = vote2 / totalVote * 100;

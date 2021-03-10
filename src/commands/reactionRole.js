@@ -8,7 +8,7 @@ module.exports = {
     type: 'utility',
     
     async run (client, message, args) {
-        if (RoleCheck.owner(message) === false)
+        if (RoleCheck.owner(message, this.name) === false)
             return;
             
         // Send original Reaction Role message

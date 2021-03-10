@@ -15,12 +15,12 @@ module.exports = {
     usage: '<file> <team>',
 
     async run (client, message, args) {
-        if (CheckChannel.default(message) === false)
+        if (CheckChannel.default(message, this.name) === false)
             return;
-        if (RoleCheck.admin(message) === false) 
+        if (RoleCheck.admin(message, this.name) === false) 
             return;
 
-        if (args[0] === "inputfile") {
+        if (args[0] == "inputfile") {
             let text = Fs.readFileSync("src/database/strats/" + args[1]).toString('utf-8');
             let textByLine = text.split("\n");
 
@@ -33,10 +33,10 @@ module.exports = {
                 stratBody  = stratSubs[1]
 
 
-                if (args[2][0] === "a") {
+                if (args[2][0] == "a") {
                     json.strats.atk.push({title: stratTitle, body: stratBody});  
                 }
-                else if (args[2][0] ==="d") {
+                else if (args[2][0] == "d") {
                     json.strats.def.push({title: stratTitle, body: stratBody});     
                 }
                 else {

@@ -10,7 +10,7 @@ module.exports = {
     usage: 'strat <TEAM>',
     
     async run (client, message, args) {
-        if (CheckChannel.default(message) === false) 
+        if (CheckChannel.default(message, this.name) === false) 
             return;
         if (args.length === 0) 
             return message.reply(`${args} is not a valid team! The proper usage is ${process.env.PREFIX}random <team>.`);

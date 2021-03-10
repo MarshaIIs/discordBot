@@ -8,7 +8,7 @@ module.exports = {
     usage: "debug <ARGS>",
     
     async run (client, message, args) {
-        if (RoleCheck.admin(message) == false)
+        if (RoleCheck.admin(message, this.name) === false)
             return;
 
         console.log('\n\nThe following args were sent:\n' + args)

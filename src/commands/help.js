@@ -9,7 +9,7 @@ module.exports = {
     usage: "help",
     
     async run (client, message, args) {
-        if (CheckChannel.default(message) == false)
+        if (CheckChannel.default(message, this.name) === false)
             return;
 
         //message.reply('here is a list of commands:\n');
